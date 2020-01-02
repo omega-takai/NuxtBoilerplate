@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "config:base",
+    ":label(renovate)",
+    ":automergePatch",
+    ":automergeMinor",
+    ":maintainLockFilesMonthly",
+    ":assignee(t--takai)",
+    ":timezone(Asia/Tokyo)"
+  ],
+  "lockFileMaintenance": {
+    "automerge": true,
+    "automergeType": "branch",
+    "enabled": true
+  },
+  "schedule": "before 9am on the first day of the month",
+  "major": {
+    "automerge": false
+  }
+}

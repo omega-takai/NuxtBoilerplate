@@ -1,0 +1,78 @@
+// global
+// variables
+
+@import 'base';
+
+// color - - - - - - - - - - - - - - - - - - -
+$_white: #f5f5f5;
+$_black: black;
+$_fonts: #333;
+$colors: (
+  "white": rgba($_white, 1),
+  "black": rgba($_black, 1),
+  "font": rgba($_fonts, 1),
+  "fontSub": rgba($_fonts, 0.6),
+);
+@function colors($key) {
+  @return map-get($colors, $key);
+}
+
+// fonts - - - - - - - - - - - - - - - - - - -
+$fonts: (
+  "color": colors(font),
+  "normal": 400,
+  "bold": 700, // iOS激太り対策
+  "extraBold": 900,
+  "size": $rootFontSize,
+  "kerning": 'palt',
+  "space": 0.1em,
+  "lineHeight": 1.5,
+);
+@function fonts($key) {
+  @return map-get($fonts, $key);
+}
+
+$TypeFamily: (
+  "normal": #{
+    Roboto,
+    YakuHanJP, 'Noto Sans JP',
+    '-apple-system', BlinkMacSystemFont, 'Segoe UI',
+    'Hiragino Sans', 'Hiragino Kaku Gothic ProN',
+    Arial, Meiryo, sans-serif
+  },
+  "number": #{ Gelasio, serif },
+);
+@function TypeFamily($key) {
+  @return map-get($TypeFamily, $key);
+}
+
+// Like a Modular Scale
+$TypeScale: (
+  "extraLarge": pix2rem(287),
+  "h1": pix2rem(177),
+  "h2": pix2rem(110),
+  "h3": pix2rem(68),
+  "h4": pix2rem(42),
+  "subtitle": pix2rem(26),
+  "body": pix2rem(16),
+  "caption": pix2rem(12),
+  "overline": pix2rem(10),
+);
+@function TypeScale($key) {
+  @return map-get($TypeScale, $key);
+}
+
+$TypeWeight: (
+  "number": 500,
+  "h1": 400,
+  "h2": 400,
+  "h3": 700,
+  "h4": 700,
+  "subtitle": 700,
+  "body": 400,
+  "caption": 400,
+  "overline": 400,
+);
+@function TypeWeight($key) {
+  @return map-get($TypeWeight, $key);
+}

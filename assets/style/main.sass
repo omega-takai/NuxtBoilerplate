@@ -1,0 +1,44 @@
+// scope    = global
+// fileName = main.sass
+
+// Library =====================================
+@import 'modern-css-reset'
+@import url('https://fonts.googleapis.com/css?family=Gelasio:500|Roboto:400,700&display=swap&subset=latin-ext')
+
+// Original Chunk ==============================
+@import _chunk
+
+// Style =======================================
+// ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
+$_breakPoint: 560px
+
+html
+  color: fonts('color')
+  font:
+    family: TypeFamily('normal')
+    size: #{fonts('size')}px
+    weight: fonts('normal')
+    feature-settings: fonts('kerning')
+  // letter-spacing: fonts('space')
+  @media (max-width: $_breakPoint)
+    font-size: 10px
+
+// animation ===============================
+// SEE: https://jp.vuejs.org/v2/guide/transitions.html#トランジションクラス
+// SEE: https://blogs.adobe.com/japan/cc-web-ui-ux-animation-principles-tips-tricks-best-practices/
+
+// Enter
+.v-enter
+  opacity: 0
+.v-enter-to
+  opacity: 1
+.v-enter-active
+  transition: opacity 0.6s ease-out
+
+// Leave
+.v-leave
+  opacity: 1
+.v-leave-to
+  opacity: 0
+.v-leave-active
+  transition: opacity 0.6s ease-in

@@ -1,0 +1,11 @@
+// global
+// computation
+
+@import 'base';
+
+$_rootSize: $rootFontSize; // default 16(px)
+$_ratio: 1 / $_rootSize; // default 0.625
+@function pix2rem($Number) {
+  $_computed: round($Number * $_ratio * 1000) / 1000;
+  @return #{$_computed}rem;
+}
