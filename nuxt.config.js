@@ -1,7 +1,7 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
-const repositoryName = 'TimeSignal'
+const repositoryName = 'VueBoilerplate'
 
 // `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
 const routerBase =
