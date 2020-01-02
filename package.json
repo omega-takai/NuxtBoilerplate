@@ -1,7 +1,7 @@
 {
-  "name": "time-signal",
+  "name": "vue-boilerplate",
   "version": "1.1.0",
-  "description": "Notify time at regular intervals",
+  "description": "To Make Vue Components",
   "author": "Tomonari Takai",
   "private": true,
   "scripts": {
