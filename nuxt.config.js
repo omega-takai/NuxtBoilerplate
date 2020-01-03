@@ -10,20 +10,17 @@ const repositoryName = 'VueBoilerplate'
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
+      router: {
         base: `/${repositoryName}/`,
-      }
-    : {}
-
-const dirBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        buildDir: 'docs',
-      }
+      },
+      generate: {
+        dir: 'docs'
+      },
+    }
     : {}
 
 export default {
-  // mode: 'universal',
-  mode: 'spa',
+  mode: 'universal',
   /*
    ** Headers of the page
    */
@@ -108,22 +105,5 @@ export default {
     //   }
     // },
   },
-  router: {
-    ...routerBase,
-    extendRoutes (routes, resolve) {
-      routes.push({
-        path: '/index.html',
-        alias: '/',
-        component: resolve(__dirname, 'pages/index.vue')
-      })
-    }
-  },
-  ...dirBase,
-  // SEE: https://ja.nuxtjs.org/api/configuration-generate/#subfolders
-  generate: {
-    subFolders: false,
-    routes: [
-      '/',
-    ]
-  },
+  ...routerBase,
 }
