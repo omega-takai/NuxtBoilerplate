@@ -1,18 +1,21 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
-const repositoryName = 'TimeSignal'
+const repositoryName = 'VueBoilerplate'
 
-// `DEPLOY_ENV` が `GH_PAGES` の場合のみ `router.base = '/<repository-name>/'` を追加する
+// DEPLOY_ENV が GH_PAGES の場合のみ router.base = '/<repository-name>/' を追加する
+// SEE: https://ja.nuxtjs.org/api/configuration-router/
+// SEE: https://ja.nuxtjs.org/faq/github-pages/
+// SEE: https://nuxtjs.org/api/configuration-builddir
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
         router: {
           base: `/${repositoryName}/`,
         },
+        buildDir: 'docs',
       }
     : {}
-// console.log('===== routerBase =====', routerBase)
 
 export default {
   mode: 'universal',
@@ -81,6 +84,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    // SEE: https://nuxtjs.org/api/configuration-build/#optimizecss
+    // optimizeCSS: true,
     loaders: {
       scss: {
         implementation: Sass,
@@ -89,7 +94,14 @@ export default {
         },
       },
     },
-    // extend(config, ctx) {}
+    // SEE: https://ja.nuxtjs.org/api/configuration-build#extend
+    // extend(config, { isDev }) {
+    //   if (!isDev) {
+    //     config.optimizeCSS = true
+    //     console.log('extend isDev', isDev)
+    //     console.log('extend optimizeCSS', config.optimizeCSS)
+    //   }
+    // },
   },
   ...routerBase,
 }

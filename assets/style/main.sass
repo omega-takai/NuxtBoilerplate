@@ -19,9 +19,13 @@ html
     size: #{fonts('size')}px
     weight: fonts('normal')
     feature-settings: fonts('kerning')
-  // letter-spacing: fonts('space')
-  @media (max-width: $_breakPoint)
+
+  @include responsive('sp')
     font-size: 10px
+  @include responsive('tablet')
+    font-size: 14px
+  @include responsive('desktop')
+    font-size: #{fonts('size')}px
 
 // animation ===============================
 // SEE: https://jp.vuejs.org/v2/guide/transitions.html#トランジションクラス

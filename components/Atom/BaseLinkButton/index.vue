@@ -28,13 +28,11 @@ export default {
     },
   },
   computed: {
-    upperCamelCase() {
+    className() {
       const rawName = this.colorType
       const lowcase = rawName.toLowerCase()
-      return lowcase.charAt(0).toUpperCase() + lowcase.slice(1)
-    },
-    className() {
-      return `button${this.upperCamelCase}`
+      const upperCamelCase = lowcase.charAt(0).toUpperCase() + lowcase.slice(1)
+      return `button${upperCamelCase}`
     },
   },
 }

@@ -11,31 +11,69 @@ module.exports = async ({ config }) => {
   config.module.rules.push(
     {
       test: /\.sass$/,
-      use: [
-        'vue-style-loader',
+      oneOf: [
         {
-          loader: 'css-loader',
-          options: {
-            sourceMap: true,
-          },
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            sourceMap: true,
-            implementation: require('sass'),
-            sassOptions: {
-              indentedSyntax: true,
-              fiber: require('fibers'),
-              // includePaths: [path.resolve(__dirname, '../assets/style/_chunk.sass')]
+          // this matches `<style lang="sass" module>`
+          resourceQuery: /module/,
+          use: [
+            'vue-style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+                modules: {
+                  localIdentName: "[local]___[hash:base64:5]",
+                },
+              },
             },
-          },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                implementation: require('sass'),
+                sassOptions: {
+                  indentedSyntax: true,
+                  fiber: require('fibers'),
+                },
+              },
+            },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
+              }
+            },
+          ],
         },
         {
-          loader: 'sass-resources-loader',
-          options: {
-            resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
-          }
+          // this matches plain `<style lang="sass">` or `<style lang="sass" scoped>`
+          use: [
+            'vue-style-loader',
+            {
+              loader: 'css-loader',
+              options: {
+                sourceMap: true,
+              },
+            },
+            {
+              loader: 'sass-loader',
+              options: {
+                sourceMap: true,
+                implementation: require('sass'),
+                sassOptions: {
+                  indentedSyntax: true,
+                  fiber: require('fibers'),
+                  // includePaths: [path.resolve(__dirname, '../assets/style/_chunk.sass')]
+                },
+              },
+            },
+            {
+              loader: 'sass-resources-loader',
+              options: {
+                resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
+              }
+            },
+          ],
         },
       ],
     },

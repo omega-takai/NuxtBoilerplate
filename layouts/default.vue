@@ -10,38 +10,63 @@ export default {
   name: 'LayoutDefault',
   data() {
     return {
-      // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
-      matchQueryMobile: '(max-width: 560px)',
+      localFlagIsMobile: true,
+      localFlagIsDesktop: false,
     }
   },
   computed: {
-    ...mapState(['isDesktop', 'isMobile']),
+    ...mapState(['isMobile', 'isTablet', 'isDesktop']),
     classNameObject() {
       return {
-        'is-desktop': this.isDesktop,
         'is-mobile': this.isMobile,
+        'is-tablet': this.isTablet,
+        'is-desktop': this.isDesktop,
       }
     },
   },
   mounted() {
     this.$nextTick(() => {
-      // SEE: https://developer.mozilla.org/ja/docs/Web/API/Window/matchMedia
-      const mqMobile = window.matchMedia(this.matchQueryMobile)
-      this.matchMobile(mqMobile)
-      mqMobile.addListener(this.matchMobile)
+      const mqlMobile = window.matchMedia(this.$style.mqlMobile)
+      const mqlDesktop = window.matchMedia(this.$style.mqlDesktop)
+      this.matchMobile(mqlMobile)
+      this.matchDesktop(mqlDesktop)
+      mqlMobile.addListener(this.matchMobile)
+      mqlDesktop.addListener(this.matchDesktop)
     })
   },
-  destroyed() {
-    const mqMobile = window.matchMedia(this.matchQueryMobile)
-    this.matchMobile(mqMobile)
-    mqMobile.removeListener(this.matchMobile)
-  },
+  // TODO: Check performance addListener
+  // destroyed() {},
   methods: {
-    ...mapActions(['setDeviceFlag']),
+    ...mapActions(['setFlagMobile', 'setFlagTablet', 'setFlagDesktop']),
     matchMobile(mql) {
-      console.log('Fire matchMobile', mql.matches)
-      this.setDeviceFlag(mql.matches)
+      if (mql.matches) {
+        this.setFlagMobile()
+        this.localFlagIsMobile = true
+      } else {
+        this.localFlagIsMobile = false
+        this.checkTablet()
+      }
+    },
+    matchDesktop(mql) {
+      if (mql.matches) {
+        this.setFlagDesktop()
+        this.localFlagIsDesktop = true
+      } else {
+        this.localFlagIsDesktop = false
+        this.checkTablet()
+      }
+    },
+    checkTablet() {
+      if (!this.localFlagIsDesktop && !this.localFlagIsMobile) {
+        this.setFlagTablet()
+      }
     },
   },
 }
 </script>
+
+<style lang="sass" module>
+// String from Sass to JS
+@value mqlMobile: #{$mql-mobile}
+@value mqlDesktop: #{$mql-desktop}
+</style>
