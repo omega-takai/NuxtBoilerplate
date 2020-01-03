@@ -10,9 +10,6 @@ export default {
   name: 'LayoutDefault',
   data() {
     return {
-      // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
-      matchQuerySmall: '(max-width: 560px)',
-      matchQueryLarge: '(min-width: 960px)',
       localFlagIsMobile: true,
       localFlagIsDesktop: false,
     }
@@ -29,8 +26,8 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      const mqlMobile = window.matchMedia(this.matchQuerySmall)
-      const mqlDesktop = window.matchMedia(this.matchQueryLarge)
+      const mqlMobile = window.matchMedia(this.$style.mqlMobile)
+      const mqlDesktop = window.matchMedia(this.$style.mqlDesktop)
       this.matchMobile(mqlMobile)
       this.matchDesktop(mqlDesktop)
       mqlMobile.addListener(this.matchMobile)
@@ -67,3 +64,9 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" module>
+// String from Sass to JS
+@value mqlMobile: #{$mql-mobile}
+@value mqlDesktop: #{$mql-desktop}
+</style>

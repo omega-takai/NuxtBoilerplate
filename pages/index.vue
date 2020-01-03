@@ -1,5 +1,5 @@
 <template lang="pug">
-  .pageIndex
+  div(:class="$style.pageIndex")
     VueToNuxtLogo
 </template>
 
@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="sass" module>
 .pageIndex
   position: relative
   min-height: 100vh

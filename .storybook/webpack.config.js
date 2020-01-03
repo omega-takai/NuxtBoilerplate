@@ -21,7 +21,6 @@ module.exports = async ({ config }) => {
               loader: 'css-loader',
               options: {
                 sourceMap: true,
-                modules: true,
                 modules: {
                   localIdentName: "[local]___[hash:base64:5]",
                 },

@@ -3,6 +3,17 @@
 
 @import 'base';
 
+// screen size - - - - - - - - - - - - - - - -
+// ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
+$screens: (
+  "extraLarge": 1366px,
+  "large": 960px,
+  "small": 560px,
+);
+@function screens($key) {
+  @return map-get($screens, $key);
+}
+
 // color - - - - - - - - - - - - - - - - - - -
 $_white: #f5f5f5;
 $_black: black;
