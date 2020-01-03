@@ -1,9 +1,9 @@
 <template lang="pug">
-  .VueToNuxtLogo
-    .Triangle.Triangle--two
-    .Triangle.Triangle--one
-    .Triangle.Triangle--three
-    .Triangle.Triangle--four
+  div(:class="$style.vueToNuxtLogo")
+    div(:class="$style.two")
+    div(:class="$style.one")
+    div(:class="$style.three")
+    div(:class="$style.four")
 </template>
 
 <script>
@@ -12,8 +12,8 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.VueToNuxtLogo
+<style lang="sass" module>
+.vueToNuxtLogo
   display: inline-block
   animation: turn 2s linear forwards 1s !important
   transform: rotateX(180deg)
@@ -22,37 +22,35 @@ export default {
   height: 180px
   width: 245px
 
-  .Triangle
+  @mixin _triangle($top, $left)
     position: absolute
-    top: 0
-    left: 0
+    top: #{$top}px
+    left: #{$left}px
     width: 0
     height: 0
 
-  .Triangle--one
+  .one
+    @include _triangle(0, 0)
     border-left: 105px solid transparent
     border-right: 105px solid transparent
     border-bottom: 180px solid #41b883
 
-  .Triangle--two
-    top: 30px
-    left: 35px
+  .two
+    @include _triangle(30, 35)
     animation: goright 0.5s linear forwards 3.5s !important
     border-left: 87.5px solid transparent
     border-right: 87.5px solid transparent
     border-bottom: 150px solid #3b8070
 
-  .Triangle--three
-    top: 60px
-    left: 35px
+  .three
+    @include _triangle(60, 35)
     animation: goright 0.5s linear forwards 3.5s !important
     border-left: 70px solid transparent
     border-right: 70px solid transparent
     border-bottom: 120px solid #35495e
 
-  .Triangle--four
-    top: 120px
-    left: 70px
+  .four
+    @include _triangle(120, 70)
     animation: godown 0.5s linear forwards 3s !important
     border-left: 35px solid transparent
     border-right: 35px solid transparent
