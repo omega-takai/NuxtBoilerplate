@@ -25,6 +25,10 @@ export const routerOptions = {
     path: "/",
     component: _a7d9bf70,
     name: "index"
+  }, {
+    path: "/index.html",
+    component: _a7d9bf70,
+    alias: "/"
   }],
 
   fallback: false
