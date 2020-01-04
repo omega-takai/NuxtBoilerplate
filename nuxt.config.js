@@ -14,6 +14,7 @@ const routerBase =
           base: `/${repositoryName}/`,
         },
         generate: {
+          devtools: true,
           fallback: true, // '404.html' を使用したい場合
           dir: 'docs',
         },
@@ -88,6 +89,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    devtools: true,
     // SEE: https://nuxtjs.org/api/configuration-build/#optimizecss
     // optimizeCSS: true,
     loaders: {
