@@ -14,6 +14,7 @@ const routerBase =
           base: `/${repositoryName}/`,
         },
         generate: {
+          fallback: true, // '404.html' を使用したい場合
           dir: 'docs',
         },
       }
@@ -28,6 +29,7 @@ export default {
     title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
+      { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
