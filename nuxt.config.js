@@ -10,13 +10,13 @@ const repositoryName = 'VueBoilerplate'
 const routerBase =
   process.env.DEPLOY_ENV === 'GH_PAGES'
     ? {
-      router: {
-        base: `/${repositoryName}/`,
-      },
-      generate: {
-        dir: 'docs'
-      },
-    }
+        router: {
+          base: `/${repositoryName}/`,
+        },
+        generate: {
+          dir: 'docs',
+        },
+      }
     : {}
 
 export default {
