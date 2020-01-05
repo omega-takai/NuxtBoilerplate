@@ -1,10 +1,10 @@
 <template lang="pug">
   footer(:class="$style.footer")
     dl
-      div
+      div(:class="rowClassName")
         dt Vuex Binding
         dd {{ bindStatus }}
-      div
+      div(:class="rowClassName")
         dt GitHub
         dd
           LinkTextWithIcon(
@@ -13,7 +13,7 @@
             :text="repoName"
             :url="repoUrl"
           )
-      div
+      div(:class="rowClassName")
         dt Author
         dd
           div {{ authorName }} ({{ authorPosition }})
@@ -24,7 +24,7 @@
             :url="twitterUrl"
           )
 
-    p(:class="$style.copy") © 2020 {{ authorName }}.
+    div(:class="$style.copy") © 2020 {{ authorName }}.
 </template>
 
 <script>
@@ -36,6 +36,10 @@ export default {
     LinkTextWithIcon,
   },
   props: {
+    isMobile: {
+      type: Boolean,
+      default: true,
+    },
     bindStatus: {
       type: String,
       default: 'Vuex Binding',
@@ -58,6 +62,9 @@ export default {
     },
   },
   computed: {
+    rowClassName() {
+      return this.isMobile ? this.$style.rowMobile : this.$style.row
+    },
     repoName() {
       const arr = this.repoUrl.split('/')
       const lastOne = arr.length - 1
@@ -87,4 +94,30 @@ export default {
   text-align: center
   font-size: TypeScale('caption')
   font-weight: TypeWeight('caption')
+
+.row
+  display: flex
+  align-items: start
+  justify-content: start
+  min-height: 2em
+  &:not(:first-of-type)
+    margin-top: pix2rem(4)
+
+  > dt
+    flex: 0 0 8em
+
+  > dd
+    flex: 1 1 100%
+
+.rowMobile
+  display: flex
+  align-items: start
+  justify-content: start
+  flex-wrap: wrap
+  min-height: 2em
+  &:not(:first-of-type)
+    margin-top: pix2rem(8)
+
+  > dt
+    flex: 1 1 100%
 </style>

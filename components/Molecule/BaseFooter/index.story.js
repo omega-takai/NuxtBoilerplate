@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import { withKnobs, text } from '@storybook/addon-knobs'
+import { withKnobs, text, boolean } from '@storybook/addon-knobs'
 import BaseFooter from './index.vue'
 import { Wrapper } from '@/assets/styledComponent/component'
 
@@ -13,6 +13,10 @@ stories.add('normal', () => ({
     Wrapper,
   },
   props: {
+    isMobile: {
+      type: Boolean,
+      default: boolean('isMobile', true)
+    },
     bindStatus: {
       type: String,
       default: text('bindStatus', 'Vuex Binding'),
@@ -37,6 +41,7 @@ stories.add('normal', () => ({
   template: `
     <Wrapper>
       <BaseFooter
+        :isMobile="isMobile"
         :bindStatus="bindStatus"
         :repoUrl="repoUrl"
         :authorName="authorName"
