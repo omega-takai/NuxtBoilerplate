@@ -94,7 +94,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    // SEE: https://nuxtjs.org/api/configuration-build/#optimizecss
     loaders: {
       scss: {
         implementation: Sass,

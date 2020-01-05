@@ -1,20 +1,15 @@
 <template lang="pug">
-  Typography(:level="3" :text="satusText")
+  p(v-text="statusText" :class="$style.status")
 </template>
 
 <script>
 import { mapState } from 'vuex'
 
-import Typography from '@/components/Atom/Typography/index.vue'
-
 export default {
   name: 'VuexStatus',
-  components: {
-    Typography,
-  },
   computed: {
     ...mapState(['isMobile', 'isTablet', 'isDesktop']),
-    satusText() {
+    statusText() {
       let text = 'isMobile'
       if (this.isTablet) {
         text = 'isTablet'
@@ -26,3 +21,16 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" module>
+@mixin _typography()
+  max-width: 100vw
+  white-space: pre-line
+  word-wrap: break-word
+  overflow-wrap: break-word
+
+.status
+  @include _typography()
+  font-size: TypeScale('body')
+  font-weight: TypeWeight('body')
+</style>

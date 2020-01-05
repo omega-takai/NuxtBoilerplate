@@ -18,6 +18,7 @@ export default {
     ...mapState(['isMobile', 'isTablet', 'isDesktop']),
     classNameObject() {
       return {
+        [this.$style.root]: true,
         'is-mobile': this.isMobile,
         'is-tablet': this.isTablet,
         'is-desktop': this.isDesktop,
@@ -69,4 +70,7 @@ export default {
 // String from Sass to JS
 @value mqlMobile: #{$mql-mobile}
 @value mqlDesktop: #{$mql-desktop}
+
+.root
+  background-color: colors('background')
 </style>

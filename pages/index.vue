@@ -1,9 +1,15 @@
 <template lang="pug">
   div(:class="$style.pageIndex")
-    div
-      VueToNuxtLogo(:class="$style.logo")
+
+    main(:class="$style.main")
+      VueToNuxtLogo
       Typography(:level="1" text="VueBoilerplate")
+
+    footer(:class="$style.footer")
       VuexStatus
+      p repository link
+      p author name (UI Designer / Front-end Engineer)
+      p author twitter
 </template>
 
 <script>
@@ -25,12 +31,22 @@ export default {
 .pageIndex
   min-height: 100vh
   width: 100vw
-  margin: 0 auto
-  display: flex
-  justify-content: center
-  align-items: center
   overflow: hidden
 
-.logo
-  margin: 0 auto
+  .main
+    display: flex
+    height: 90vh
+    padding-bottom: 5vh
+    margin: 0 auto
+    justify-content: center
+    align-items: center
+    flex-direction: column
+
+  .footer
+    min-height: 10vh
+    background-color: colors('inverted')
+    color: colors('white')
+    font-size: TypeScale('body')
+    font-weight: TypeWeight('body')
+    padding: 3em 5em
 </style>
