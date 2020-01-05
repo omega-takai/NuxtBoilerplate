@@ -33,6 +33,9 @@ export default {
     colorType: {
       type: String,
       default: 'green',
+      validator(value) {
+        return ['green', 'grey', 'white'].includes(value)
+      },
     },
     text: {
       type: String,

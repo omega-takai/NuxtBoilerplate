@@ -16,6 +16,9 @@ export default {
     colorType: {
       type: String,
       default: 'green',
+      validator(value) {
+        return ['green', 'grey', 'white'].includes(value)
+      },
     },
     text: {
       type: String,
@@ -38,7 +41,7 @@ export default {
 
 <style lang="sass" module>
 @mixin _structure()
-  padding: 0.1em 0.5em
+  padding: 0.1em
   max-width: 90vw
   display: inline-flex
   align-items: center
@@ -49,9 +52,10 @@ export default {
   border-radius: pix2rem(4)
   color: $_color
   text-decoration: underline
+  transition: transform 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96)
   &:hover
-    color: white
-    background-color: $_color
+    text-decoration: none
+    transform: scale(1.1)
   // Extra
   white-space: pre-line
   word-wrap: break-word
@@ -67,4 +71,7 @@ export default {
 
 .grey
   @include _link(#{colors('inverted')})
+
+.white
+  @include _link(#{colors('white')})
 </style>

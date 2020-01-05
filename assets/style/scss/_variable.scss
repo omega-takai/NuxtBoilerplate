@@ -20,6 +20,7 @@ $_black: black;
 $_fonts: #333;
 $colors: (
   "white": rgba($_white, 1),
+  "whiteAlpha": rgba($_white, 0.4),
   "black": rgba($_black, 1),
   "green": rgba(#3b8070, 1),
   "background": rgba($_white, 1),
