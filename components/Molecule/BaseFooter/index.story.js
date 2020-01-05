@@ -15,7 +15,7 @@ stories.add('normal', () => ({
   props: {
     isMobile: {
       type: Boolean,
-      default: boolean('isMobile', true)
+      default: boolean('isMobile', true),
     },
     bindStatus: {
       type: String,
