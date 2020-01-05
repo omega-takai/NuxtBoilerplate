@@ -14,7 +14,7 @@ export default {
 
 <style lang="sass" module>
 .vueToNuxtLogo
-  display: inline-block
+  display: block
   animation: turn 2s linear forwards 1s !important
   transform: rotateX(180deg)
   position: relative

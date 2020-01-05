@@ -35,6 +35,11 @@ export default {
   display: block
   color: colors('font')
   line-height: 1.15
+  max-width: 100vw
+  // Extra
+  white-space: pre-line
+  word-wrap: break-word
+  overflow-wrap: break-word
 
 .h1
   @include _typography()
