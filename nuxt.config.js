@@ -85,7 +85,7 @@ export default {
     config: {
       productionTip: false,
       devtools: true,
-    }
+    },
   },
   /*
    ** Build configuration
