@@ -14,7 +14,6 @@ const routerBase =
           base: `/${repositoryName}/`,
         },
         generate: {
-          devtools: true,
           fallback: true, // '404.html' を使用したい場合
           dir: 'docs',
         },
@@ -82,6 +81,12 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+  vue: {
+    config: {
+      productionTip: false,
+      devtools: true,
+    }
+  },
   /*
    ** Build configuration
    */
@@ -89,9 +94,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    devtools: true,
     // SEE: https://nuxtjs.org/api/configuration-build/#optimizecss
-    // optimizeCSS: true,
     loaders: {
       scss: {
         implementation: Sass,
@@ -100,12 +103,10 @@ export default {
         },
       },
     },
-    // SEE: https://ja.nuxtjs.org/api/configuration-build#extend
-    // extend(config, { isDev }) {
-    //   if (!isDev) {
-    //     config.optimizeCSS = true
-    //     console.log('extend isDev', isDev)
-    //     console.log('extend optimizeCSS', config.optimizeCSS)
+    // extend (config, { isClient }) {
+    //   // クライアントのバンドルの Webpack 設定のみを拡張する
+    //   if (isClient) {
+    //     config.devtool = 'source-map'
     //   }
     // },
   },
