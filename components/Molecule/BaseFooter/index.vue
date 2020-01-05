@@ -95,11 +95,14 @@ export default {
   font-size: TypeScale('caption')
   font-weight: TypeWeight('caption')
 
-.row
+@mixin _row()
   display: flex
-  align-items: start
-  justify-content: start
+  align-items: flex-start
+  justify-content: flex-start
   min-height: 2em
+
+.row
+  @include _row()
   &:not(:first-of-type)
     margin-top: pix2rem(4)
 
@@ -110,11 +113,8 @@ export default {
     flex: 1 1 100%
 
 .rowMobile
-  display: flex
-  align-items: start
-  justify-content: start
+  @include _row()
   flex-wrap: wrap
-  min-height: 2em
   &:not(:first-of-type)
     margin-top: pix2rem(8)
 
