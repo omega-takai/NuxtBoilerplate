@@ -15,6 +15,16 @@ export const state = () => ({
     position: 'UI Designer / Front-end Engineer',
     twitterUrl: 'https://twitter.com/TomonariTakai',
   },
+  sitemap: [
+    {
+      name: 'HOME',
+      path: '/',
+    },
+    {
+      name: 'OTHER PAGE',
+      path: '/OtherPage',
+    },
+  ],
 })
 
 export const getters = {}
