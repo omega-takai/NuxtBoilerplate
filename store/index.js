@@ -30,31 +30,21 @@ export const state = () => ({
 export const getters = {}
 
 export const mutations = {
-  setFlagMobile: (state) => {
-    state.isDesktop = false
-    state.isTablet = false
-    state.isMobile = true
-  },
-  setFlagTablet: (state) => {
-    state.isDesktop = false
-    state.isTablet = true
-    state.isMobile = false
-  },
-  setFlagDesktop: (state) => {
-    state.isDesktop = true
-    state.isTablet = false
-    state.isMobile = false
+  setDeviceFlag: (state, deviceType) => {
+    state.isDesktop = deviceType === 'desktop'
+    state.isTablet = deviceType === 'tablet'
+    state.isMobile = deviceType === 'mobile'
   },
 }
 
 export const actions = {
   setFlagMobile({ commit }) {
-    commit('setFlagMobile')
+    commit('setDeviceFlag', 'mobile')
   },
   setFlagTablet({ commit }) {
-    commit('setFlagTablet')
+    commit('setDeviceFlag', 'tablet')
   },
   setFlagDesktop({ commit }) {
-    commit('setFlagDesktop')
+    commit('setDeviceFlag', 'desktop')
   },
 }
