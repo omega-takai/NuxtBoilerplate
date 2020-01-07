@@ -37,9 +37,6 @@ export default {
 </script>
 
 <style lang="sass" module>
-.isActive
-  color: colors('accent')
-
 .wrapper
   display: block
 
@@ -49,6 +46,9 @@ export default {
       left: 1.2em
     font-size: TypeScale('subtitle')
     font-weight: TypeWeight('subtitle')
+
+    &.isActive
+      color: colors('accent')
 
     .icon
       position: absolute
