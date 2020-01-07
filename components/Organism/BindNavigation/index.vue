@@ -3,14 +3,19 @@
     li(
       v-for="(val, i) in sitemap"
       :key="i"
-      :class="$style.listItem"
     )
       BaseNuxtLink(
         :text="val.name"
         :url="val.path"
         :exactActiveClass="$style.isActive"
+        :class="$style.listItem"
       )
-        FeatherIcon(iconName="ArrowRightIcon")
+        transition(appear)
+          FeatherIcon(
+            v-if="$route.path === val.path"
+            iconName="ArrowRightIcon"
+            :class="$style.icon"
+          )
 </template>
 
 <script>
@@ -33,9 +38,19 @@ export default {
 
 <style lang="sass" module>
 .isActive
-  color: red
+  color: colors('accent')
 
 .wrapper
-  list-style: none
-  padding: 0
+  display: block
+
+  .listItem
+    position: relative
+    padding:
+      left: 1.2em
+    font-size: TypeScale('subtitle')
+    font-weight: TypeWeight('subtitle')
+
+    .icon
+      position: absolute
+      left: 0
 </style>

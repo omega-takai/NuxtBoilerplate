@@ -3,7 +3,7 @@
 
     main(:class="$style.main")
       slot
-      BindNavigation
+      BindNavigation(:class="$style.nav")
 
     BindFooter(:class="$style.footer")
 </template>
@@ -30,11 +30,18 @@ export default {
   .main
     display: flex
     height: 90vh
-    padding-bottom: 5vh
+    padding:
+      right: pix2rem(16)
+      left: pix2rem(16)
+      bottom: 5vh
     margin: 0 auto
     justify-content: center
     align-items: center
     flex-direction: column
+
+    .nav
+      margin:
+        top: pix2rem(16)
 
   .footer
     min-height: 10vh

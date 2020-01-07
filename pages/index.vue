@@ -1,7 +1,19 @@
 <template lang="pug">
   BaseLayout
-    VueToNuxtLogo
-    Typography(:level="1" text="VueBoilerplate")
+    template(v-slot:default)
+      transition-group(
+        appear
+        tag="div"
+      )
+        VueToNuxtLogo(
+          key="logo"
+          :class="$style.logo"
+        )
+        Typography(
+          :level="1"
+          text="VueBoilerplate"
+          key="title"
+        )
 </template>
 
 <script>
@@ -18,3 +30,8 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" module>
+.logo
+  margin: 0 auto
+</style>
