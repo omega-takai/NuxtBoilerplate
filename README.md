@@ -6,7 +6,7 @@
 
 ## DEMO
 
-WIP
+<https://t--takai.github.io/VueBoilerplate/>
 
 ## Features
 
@@ -15,6 +15,8 @@ WIP
 - Nuxt.js v2.5.0
 - Vuex
 - Storybook
+- template lang="pug"
+- style lang="sass"
 
 ## How to Develop
 
@@ -28,6 +30,9 @@ $ yarn dev
 # build for production and launch server
 $ yarn build
 $ yarn start
+
+# open storybook with hot reload
+$ yarn storybook
 
 # generate static project
 $ yarn generate
