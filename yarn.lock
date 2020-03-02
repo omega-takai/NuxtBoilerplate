@@ -11470,10 +11470,10 @@ sass-resources-loader@2.0.1, sass-resources-loader@^2.0.0:
     glob "^7.1.1"
     loader-utils "^1.0.4"
 
-sass@1.24.5:
-  version "1.24.5"
-  resolved "https://registry.yarnpkg.com/sass/-/sass-1.24.5.tgz#7fecab3c4db486c584fecb1a79fbc156e52c6c44"
-  integrity sha512-vVtXAVGAcR2ZSwxi8poB1+sj8yQo6GfB1gNHeBRJtxpT7JqN8uXWpJorC1yGQN8ScBbcccGENwyfEwIBGudV3w==
+sass@1.26.2:
+  version "1.26.2"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.26.2.tgz#4e17c5c2394e2ee7ffd653ac1d862314a6a5767b"
+  integrity sha512-9TRp1d1NH0mWH8rqaR/jCS05f/TFD1ykPF2zSYviprMhLb0EmXVqtKMUHsvDt3YIT/jbSK6qAvUlfCW/HJkdCw==
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
