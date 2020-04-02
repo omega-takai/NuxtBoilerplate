@@ -88,6 +88,13 @@ export default {
     },
   },
   /*
+   ** Serve configuration
+   */
+  server: {
+    port: 4000, // default: 3000
+    host: 'localhost', // default: localhost
+  },
+  /*
    ** Build configuration
    */
   build: {
@@ -103,7 +110,7 @@ export default {
       },
     },
     // extend (config, { isClient }) {
-    //   // クライアントのバンドルの Webpack 設定のみを拡張する
+    //   クライアントのバンドルの Webpack 設定のみを拡張する
     //   if (isClient) {
     //     config.devtool = 'source-map'
     //   }
