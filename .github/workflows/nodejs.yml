@@ -115,8 +115,8 @@ jobs:
     # - run: npm ci
     # - run: npm run build --if-present
     # - run: npm test
-      env:
-        CI: true
+      # env:
+      #   CI: true
   # test-with-puppeteer:
   #   runs-on: ubuntu-latest
   #   steps:
