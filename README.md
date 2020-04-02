@@ -1,6 +1,7 @@
 # VueBoilerplate
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/VueBoilerplate/blob/master/LICENSE) ![Main](https://github.com/t--takai/VueBoilerplate/workflows/Main/badge.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/VueBoilerplate/blob/master/LICENSE)
+![CI](https://github.com/t--takai/VueBoilerplate/workflows/CI/badge.svg)
 
 > To Make Vue Components
 
