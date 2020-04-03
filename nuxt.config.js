@@ -74,7 +74,7 @@ export default {
     '@nuxtjs/style-resources',
   ],
   styleResources: {
-    sass: ['./src/assets/style/_chunk.sass'],
+    sass: ['./assets/style/_chunk.sass'],
   },
   /*
    ** Axios module configuration
