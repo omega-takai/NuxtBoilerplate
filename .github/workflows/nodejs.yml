@@ -46,44 +46,44 @@ jobs:
       - name: jest
         run: yarn test
 
-  storybook:
-    runs-on: ubuntu-latest
-    needs: lint-and-test
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+  # storybook:
+  #   runs-on: ubuntu-latest
+  #   needs: lint-and-test
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x]
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - run: yarn install
-      - run: yarn build-storybook
-      - uses: actions/upload-artifact@v1
-        with:
-          name: Storybook
-          path: .out
+  #     - run: yarn install
+  #     - run: yarn build-storybook
+  #     - uses: actions/upload-artifact@v1
+  #       with:
+  #         name: Storybook
+  #         path: .out
 
-  deploy:
-    runs-on: ubuntu-latest
-    needs: lint-and-test
-    strategy:
-      matrix:
-        node-version: [12.x]
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: lint-and-test
+  #   strategy:
+  #     matrix:
+  #       node-version: [12.x]
+  #   steps:
+  #     - uses: actions/checkout@v2
+  #     - name: Use Node.js ${{ matrix.node-version }}
+  #       uses: actions/setup-node@v1
+  #       with:
+  #         node-version: ${{ matrix.node-version }}
 
-      - run: yarn install
-      - run: yarn generate:gh-pages
+  #     - run: yarn install
+  #     - run: yarn generate:gh-pages
 
-      - name: deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs
+  #     - name: deploy
+  #       uses: peaceiris/actions-gh-pages@v3
+  #       with:
+  #         github_token: ${{ secrets.GITHUB_TOKEN }}
+  #         publish_dir: ./docs
