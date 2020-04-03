@@ -27,7 +27,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Yarn Version $(yarn -v)
+      - name: Yarn Versions $(yarn -v)
+        run: yarn versions
 
       - name: Get yarn cache
         id: yarn-cache
