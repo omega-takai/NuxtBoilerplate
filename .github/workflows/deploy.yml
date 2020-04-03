@@ -1,5 +1,6 @@
 # Document: https://help.github.com/ja/actions
-name: GitHub Pages Deployment - Nuxt.js
+# GitHub Pages Deployment - Nuxt.js
+name: DEPLOYMENT
 
 on:
   push:
@@ -22,6 +23,7 @@ jobs:
       - run: yarn generate:gh-pages
 
       - name: deploy
+        if: success()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
