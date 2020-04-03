@@ -101,6 +101,19 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    babel: {
+      presets({ isServer }) {
+        return [
+          [
+            require.resolve('@nuxt/babel-preset-app'),
+            {
+              buildTarget: isServer ? 'server' : 'client',
+              corejs: { version: 3 },
+            },
+          ],
+        ]
+      },
+    },
     loaders: {
       scss: {
         implementation: Sass,
@@ -109,12 +122,6 @@ export default {
         },
       },
     },
-    // extend (config, { isClient }) {
-    //   クライアントのバンドルの Webpack 設定のみを拡張する
-    //   if (isClient) {
-    //     config.devtool = 'source-map'
-    //   }
-    // },
   },
   ...routerBase,
 }
