@@ -1,7 +1,7 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
-const repositoryName = 'VueBoilerplate'
+const repositoryName = 'NuxtBoilerplate'
 
 // DEPLOY_ENV が GH_PAGES の場合のみ router.base = '/<repository-name>/' を追加する
 // SEE: https://ja.nuxtjs.org/api/configuration-router/
