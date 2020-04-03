@@ -24,7 +24,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.9.7",
     "@nuxtjs/style-resources": "1.0.0",
-    "core-js": "2.6.11",
+    "core-js": "3.6.4",
     "modern-css-reset": "1.1.0",
     "nuxt": "2.12.2",
     "vue-feather-icons": "5.0.0",
