@@ -1,24 +1,23 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
-const repositoryName = 'NuxtBoilerplate'
+const baseDir = process.env.BASE_DIR || '/'
 
 // DEPLOY_ENV が GH_PAGES の場合のみ router.base = '/<repository-name>/' を追加する
 // SEE: https://ja.nuxtjs.org/api/configuration-router/
 // SEE: https://ja.nuxtjs.org/faq/github-pages/
 // SEE: https://nuxtjs.org/api/configuration-builddir
-const routerBase =
-  process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? {
-        router: {
-          base: `/${repositoryName}/`,
-        },
-        generate: {
-          fallback: true, // '404.html' を使用したい場合
-          dir: 'public',
-        },
-      }
-    : {}
+const routerBase = process.env.BASE_DIR
+  ? {
+      router: {
+        base: baseDir,
+      },
+      generate: {
+        fallback: true, // '404.html' を使用したい場合
+        dir: 'public',
+      },
+    }
+  : {}
 
 export default {
   mode: 'universal',
@@ -38,7 +37,7 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', type: 'image/x-icon', href: `${baseDir}favicon.ico` },
       {
         rel: 'stylesheet',
         href:
@@ -94,6 +93,11 @@ export default {
     port: 4000, // default: 3000
     host: 'localhost', // default: localhost
   },
+  /**
+   * configuration-srcdir
+   * DOC: https://ja.nuxtjs.org/api/configuration-srcdir/#__layout
+   */
+  srcDir: 'src/',
   /*
    ** Build configuration
    */
