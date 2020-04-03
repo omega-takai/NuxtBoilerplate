@@ -15,7 +15,7 @@ const routerBase =
         },
         generate: {
           fallback: true, // '404.html' を使用したい場合
-          dir: 'dist',
+          dir: 'public',
         },
       }
     : {}
