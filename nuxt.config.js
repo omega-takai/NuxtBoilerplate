@@ -74,7 +74,7 @@ export default {
     '@nuxtjs/style-resources',
   ],
   styleResources: {
-    sass: ['./assets/style/_chunk.sass'],
+    sass: ['./src/assets/style/_chunk.sass'],
   },
   /*
    ** Axios module configuration
@@ -94,6 +94,11 @@ export default {
     port: 4000, // default: 3000
     host: 'localhost', // default: localhost
   },
+  /**
+   * configuration-srcdir
+   * DOC: https://ja.nuxtjs.org/api/configuration-srcdir/#__layout
+   */
+  srcDir: 'src/',
   /*
    ** Build configuration
    */

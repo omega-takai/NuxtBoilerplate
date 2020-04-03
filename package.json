@@ -17,9 +17,9 @@
     "clean": "rimraf .nuxt dist .out",
     "test": "jest",
     "prestorybook": "yarn clean",
-    "storybook": "start-storybook -c .storybook -p 6006",
+    "storybook": "start-storybook -c ./src/.storybook -p 6006",
     "storybook:debug": "yarn storybook --debug-webpack",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c ./src/.storybook -o .out"
   },
   "dependencies": {
     "@nuxtjs/axios": "5.9.7",
