@@ -1,10 +1,14 @@
 # NuxtBoilerplate
 
-![Deploy](https://github.com/t--takai/NuxtBoilerplate/workflows/GitHub%20Pages%20Deployment%20-%20Nuxt.js/badge.svg)
-![CI](https://github.com/t--takai/NuxtBoilerplate/workflows/CI%20-%20Continuous%20Integration/badge.svg)
+![GitHub Pages Deployment - Nuxt.js](https://github.com/t--takai/NuxtBoilerplate/workflows/GitHub%20Pages%20Deployment%20-%20Nuxt.js/badge.svg)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/NuxtBoilerplate/blob/master/LICENSE)
 
 > To Make Vue Components
+
+## Status on develop-branch
+
+![CHECK BUILD](https://github.com/t--takai/NuxtBoilerplate/workflows/CHECK%20BUILD/badge.svg?branch=develop)
+![CI TEST](https://github.com/t--takai/NuxtBoilerplate/workflows/CI%20TEST/badge.svg?branch=develop)
 
 ## DEMO
 
