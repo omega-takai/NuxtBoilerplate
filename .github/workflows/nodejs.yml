@@ -4,6 +4,7 @@ name: GitHub Pages Deployment - Nuxt.js
 on:
   push:
     branches: [ master ]
+  # TODO: releaseトリガーは別にしたほうが良い
   pull_request:
     branches: [ master ]
 
