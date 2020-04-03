@@ -10,7 +10,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "pregenerate:gh-pages": "yarn clean:generate",
-    "generate:gh-pages": "cross-env DEPLOY_ENV=GH_PAGES nuxt generate",
+    "generate:gh-pages": "cross-env BASE_DIR=/NuxtBoilerplate/ nuxt generate",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue .",
     "clean:generate": "yarn clean docs",
