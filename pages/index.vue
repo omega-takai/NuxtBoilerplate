@@ -11,7 +11,7 @@
         )
         Typography(
           :level="1"
-          text="VueBoilerplate"
+          text="NuxtBoilerplate"
           key="title"
         )
 </template>
