@@ -9,7 +9,7 @@ export const state = () => ({
   isDesktop: false,
   isTablet: false,
   isMobile: true,
-  repositoryUrl: 'https://github.com/t--takai/VueBoilerplate',
+  repositoryUrl: 'https://github.com/t--takai/NuxtBoilerplate',
   author: {
     name: 'Tomonari Takai',
     position: 'UI Designer / Front-end Engineer',
