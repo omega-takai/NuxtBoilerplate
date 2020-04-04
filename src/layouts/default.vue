@@ -19,9 +19,9 @@ export default {
     classNameObject() {
       return {
         [this.$style.root]: true,
-        'is-mobile': this.isMobile,
-        'is-tablet': this.isTablet,
-        'is-desktop': this.isDesktop,
+        [this.$style.isMobile]: this.isMobile,
+        [this.$style.isTablet]: this.isTablet,
+        [this.$style.isDesktop]: this.isDesktop,
       }
     },
   },
@@ -73,4 +73,38 @@ export default {
 
 .root
   background-color: colors('background')
+
+@mixin _flashAnimation
+  $_inCubic: cubic-bezier(0.55, 0.06, 0.68, 0.19)
+  animation-duration: 1.5s !important
+  animation-timing-function: $_inCubic !important
+  animation-delay: 0s !important
+  animation-iteration-count: 1 !important
+  animation-direction: reverse !important
+  animation-fill-mode: none !important
+  animation-play-state: running !important
+
+@keyframes flashA
+  0%
+    background-color: colors('background')
+  100%
+    background-color: burlywood
+
+@keyframes flashB
+  0%
+    background-color: colors('background')
+  100%
+    background-color: burlywood
+
+.isDesktop
+  @include _flashAnimation
+  animation-name: flashA !important
+
+.isTablet
+  @include _flashAnimation
+  animation-name: flashB !important
+
+.isMobile
+  @include _flashAnimation
+  animation-name: flashA !important
 </style>
