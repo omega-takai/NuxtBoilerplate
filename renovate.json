@@ -1,19 +1,23 @@
 {
   "extends": [
     "config:base",
+    "schedule:earlyMondays",
     ":label(renovate)",
     ":automergePatch",
     ":automergeMinor",
-    ":maintainLockFilesMonthly",
+    ":automergePr",
     ":assignee(t--takai)",
     ":timezone(Asia/Tokyo)"
   ],
   "lockFileMaintenance": {
+    "enabled": true,
     "automerge": true,
-    "automergeType": "branch",
-    "enabled": true
+    "extends": [
+      "schedule:monthly",
+      ":assignee(t--takai)",
+      ":automergePr"
+    ]
   },
-  "schedule": "before 9am on the first day of the month",
   "major": {
     "automerge": false
   }
