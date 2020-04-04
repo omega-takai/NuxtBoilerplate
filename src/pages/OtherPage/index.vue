@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import BaseLayout from '@/components/Template/BaseLayout.vue'
+import BaseLayout from '@/components/Template/BaseLayout/index.vue'
 import Typography from '@/components/Atom/Typography/index.vue'
 
 export default {

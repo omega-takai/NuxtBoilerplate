@@ -79,45 +79,4 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.footer
-  background-color: colors('inverted')
-  color: colors('white')
-  font-size: TypeScale('body')
-  font-weight: TypeWeight('body')
-  padding: 3em 5em 1em
-
-.copy
-  margin-top: TypeScale('body')
-  border-top: 1px solid colors('whiteAlpha')
-  padding: TypeScale('body') 0
-  text-align: center
-  font-size: TypeScale('caption')
-  font-weight: TypeWeight('caption')
-
-@mixin _row()
-  display: flex
-  align-items: flex-start
-  justify-content: flex-start
-  min-height: 2em
-
-.row
-  @include _row()
-  &:not(:first-of-type)
-    margin-top: pix2rem(4)
-
-  > dt
-    flex: 0 0 8em
-
-  > dd
-    flex: 1 1 100%
-
-.rowMobile
-  @include _row()
-  flex-wrap: wrap
-  &:not(:first-of-type)
-    margin-top: pix2rem(8)
-
-  > dt
-    flex: 1 1 100%
-</style>
+<style lang="sass" src="./index.sass" module />

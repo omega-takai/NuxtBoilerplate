@@ -36,21 +36,4 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.wrapper
-  display: block
-
-  .listItem
-    position: relative
-    padding:
-      left: 1.2em
-    font-size: TypeScale('subtitle')
-    font-weight: TypeWeight('subtitle')
-
-    &.isActive
-      color: colors('accent')
-
-    .icon
-      position: absolute
-      left: 0
-</style>
+<style lang="sass" src="./index.sass" module />

@@ -21,28 +21,4 @@ export default {
 }
 </script>
 
-<style lang="sass" module>
-.layout
-  min-height: 100vh
-  width: 100vw
-  overflow: hidden
-
-  .main
-    display: flex
-    height: 90vh
-    padding:
-      right: pix2rem(16)
-      left: pix2rem(16)
-      bottom: 5vh
-    margin: 0 auto
-    justify-content: center
-    align-items: center
-    flex-direction: column
-
-    .nav
-      margin:
-        top: pix2rem(16)
-
-  .footer
-    min-height: 10vh
-</style>
+<style lang="sass" src="./index.sass" module />

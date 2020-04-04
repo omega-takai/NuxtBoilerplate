@@ -30,34 +30,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@mixin _typography()
-  display: block
-  color: colors('font')
-  line-height: 1.15
-  max-width: 100vw
-  // Extra
-  white-space: pre-line
-  word-wrap: break-word
-  overflow-wrap: break-word
-
-.h1
-  @include _typography()
-  font-size: TypeScale('h1')
-  font-weight: TypeWeight('h1')
-
-.h2
-  @include _typography()
-  font-size: TypeScale('h2')
-  font-weight: TypeWeight('h2')
-
-.h3
-  @include _typography()
-  font-size: TypeScale('h3')
-  font-weight: TypeWeight('h3')
-
-.h4
-  @include _typography()
-  font-size: TypeScale('h4')
-  font-weight: TypeWeight('h4')
-</style>
+<style lang="sass" src="./index.sass" scoped />

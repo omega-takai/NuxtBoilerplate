@@ -42,21 +42,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-@mixin _skin()
-  font:
-    family: TypeFamily('number')
-    weight: TypeWeight('number')
-  line-height: 1
-  display: block
-
-.time
-  @include _skin()
-  font-size: TypeScale('h1')
-  color: colors('font')
-
-.date
-  @include _skin()
-  font-size: TypeScale('h4')
-  color: colors('fontSub')
-</style>
+<style lang="sass" src="./index.sass" scoped />

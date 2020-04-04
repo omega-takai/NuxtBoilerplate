@@ -48,7 +48,4 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
-.icon
-  margin-right: pix2rem(8)
-</style>
+<style lang="sass" src="./index.sass" scoped />
