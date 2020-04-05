@@ -24,7 +24,7 @@
   "dependencies": {
     "@nuxtjs/axios": "5.9.7",
     "@nuxtjs/style-resources": "1.0.0",
-    "core-js": "3",
+    "core-js": "3.6.4",
     "modern-css-reset": "1.1.0",
     "nuxt": "2.12.2",
     "vue-feather-icons": "5.0.0",
@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
-    "@babel/runtime-corejs3": "^7.9.2",
+    "@babel/runtime-corejs3": "7.9.2",
     "@nuxtjs/eslint-config": "2.0.2",
     "@nuxtjs/eslint-module": "1.1.0",
     "@storybook/addon-actions": "5.2.8",
