@@ -17,7 +17,7 @@ export const state = () => ({
   },
   sitemap: [
     {
-      name: 'HOME',
+      name: 'TOP',
       path: '/',
     },
     {
