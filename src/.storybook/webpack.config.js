@@ -1,5 +1,39 @@
 const path = require('path')
 
+const cssLoader = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: true,
+  },
+}
+
+const cssLoaderModule = {
+  loader: 'css-loader',
+  options: {
+    sourceMap: true,
+    modules: {
+      localIdentName: "[local]___[hash:base64:5]",
+    },
+  },
+}
+const sassLoader = {
+  loader: 'sass-loader',
+  options: {
+    sourceMap: true,
+    implementation: require('sass'),
+    sassOptions: {
+      fiber: require('fibers'),
+    },
+  },
+}
+
+const sassResourcesLoader = {
+  loader: 'sass-resources-loader',
+  options: {
+    resources: path.resolve(__dirname, '../assets/style/_chunk.scss')
+  }
+}
+
 // Export a function. Accept the base config as the only param.
 // SEE: https://storybook.js.org/docs/configurations/custom-webpack-config/#full-control-mode
 module.exports = async ({ config }) => {
@@ -10,79 +44,26 @@ module.exports = async ({ config }) => {
   // Make whatever fine-grained changes you need
   config.module.rules.push(
     {
-      test: /\.sass$/,
+      test: /\.scss$/,
       oneOf: [
         {
           // this matches `<style lang="sass" module>`
           resourceQuery: /module/,
           use: [
             'vue-style-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-                modules: {
-                  localIdentName: "[local]___[hash:base64:5]",
-                },
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-                implementation: require('sass'),
-                sassOptions: {
-                  indentedSyntax: true,
-                  fiber: require('fibers'),
-                },
-              },
-            },
-            {
-              loader: 'sass-resources-loader',
-              options: {
-                resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
-              }
-            },
+            cssLoaderModule,
+            sassLoader,
+            sassResourcesLoader,
           ],
         },
         {
-          // this matches plain `<style lang="sass">` or `<style lang="sass" scoped>`
           use: [
             'vue-style-loader',
-            {
-              loader: 'css-loader',
-              options: {
-                sourceMap: true,
-              },
-            },
-            {
-              loader: 'sass-loader',
-              options: {
-                sourceMap: true,
-                implementation: require('sass'),
-                sassOptions: {
-                  indentedSyntax: true,
-                  fiber: require('fibers'),
-                  // includePaths: [path.resolve(__dirname, '../assets/style/_chunk.sass')]
-                },
-              },
-            },
-            {
-              loader: 'sass-resources-loader',
-              options: {
-                resources: path.resolve(__dirname, '../assets/style/_chunk.sass')
-              }
-            },
+            cssLoader,
+            sassLoader,
+            sassResourcesLoader,
           ],
         },
-      ],
-    },
-    {
-      test: /\.scss$/,
-      use: [
-        'vue-style-loader',
-        'css-loader',
-        'sass-loader',
       ],
     },
     {
