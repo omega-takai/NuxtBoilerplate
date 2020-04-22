@@ -40,7 +40,7 @@ export default {
     ],
   },
   loading: { color: '#ddd' },
-  css: ['@/assets/style/main.sass'],
+  css: ['@/assets/style/main.scss'],
   plugins: [],
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
@@ -52,7 +52,7 @@ export default {
     '@nuxtjs/style-resources',
   ],
   styleResources: {
-    sass: ['./assets/style/_chunk.sass'],
+    scss: ['./assets/style/_chunk.scss'],
   },
   axios: {},
   vue: {

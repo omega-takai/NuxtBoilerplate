@@ -1,5 +1,5 @@
 <script src="./index.js"></script>
-<style lang="sass" module src="./index.sass"></style>
+<style lang="scss" module src="./index.scss"></style>
 <template lang="pug">
   BaseLayout
     template(v-slot:default)

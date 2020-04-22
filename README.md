@@ -22,7 +22,7 @@
 - Vuex
 - Storybook
 - template lang="pug"
-- style lang="sass"
+- style lang="scss"
 
 ## How to Develop
 

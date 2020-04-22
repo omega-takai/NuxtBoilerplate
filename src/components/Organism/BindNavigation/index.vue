@@ -1,5 +1,5 @@
 <script src="./index.js"></script>
-<style lang="sass" src="./index.sass" module></style>
+<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   ul(:class="$style.wrapper")
     li(

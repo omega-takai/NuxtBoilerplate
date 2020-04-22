@@ -1,5 +1,5 @@
 <script src="./default.js"></script>
-<style lang="sass" module src="./default.sass"></style>
+<style lang="scss" module src="./default.scss"></style>
 <template lang="pug">
   div(:class="classNameObject")
     nuxt
