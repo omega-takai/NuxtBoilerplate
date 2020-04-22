@@ -1,3 +1,5 @@
+<script src="./index.js"></script>
+<style lang="sass" src="./index.sass" module></style>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -7,18 +9,3 @@
 
     BindFooter(:class="$style.footer")
 </template>
-
-<script>
-import BindNavigation from '@/components/Organism/BindNavigation/index.vue'
-import BindFooter from '@/components/Organism/BindFooter/index.vue'
-
-export default {
-  name: 'BaseLayout',
-  components: {
-    BindNavigation,
-    BindFooter,
-  },
-}
-</script>
-
-<style lang="sass" src="./index.sass" module />
