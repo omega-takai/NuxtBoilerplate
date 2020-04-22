@@ -1,3 +1,5 @@
+<script src="./index.js"></script>
+<style lang="scss" module src="./index.scss"></style>
 <template lang="pug">
   BaseLayout
     template(v-slot:default)
@@ -15,23 +17,3 @@
           key="title"
         )
 </template>
-
-<script>
-import BaseLayout from '@/components/Template/BaseLayout.vue'
-import VueToNuxtLogo from '@/components/Atom/VueToNuxtLogo/index.vue'
-import Typography from '@/components/Atom/Typography/index.vue'
-
-export default {
-  name: 'PageIndex',
-  components: {
-    BaseLayout,
-    VueToNuxtLogo,
-    Typography,
-  },
-}
-</script>
-
-<style lang="sass" module>
-.logo
-  margin: 0 auto
-</style>

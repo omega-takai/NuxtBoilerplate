@@ -1,29 +1,19 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
 
-const baseDir = process.env.BASE_DIR || '/'
-
-// DEPLOY_ENV が GH_PAGES の場合のみ router.base = '/<repository-name>/' を追加する
-// SEE: https://ja.nuxtjs.org/api/configuration-router/
-// SEE: https://ja.nuxtjs.org/faq/github-pages/
-// SEE: https://nuxtjs.org/api/configuration-builddir
 const routerBase = process.env.BASE_DIR
   ? {
       router: {
-        base: baseDir,
+        base: process.env.BASE_DIR,
       },
       generate: {
-        fallback: true, // '404.html' を使用したい場合
+        fallback: true,
         dir: 'public',
       },
     }
   : {}
 
 export default {
-  mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -37,7 +27,11 @@ export default {
       },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: `${baseDir}favicon.ico` },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: `${process.env.BASE_DIR || '/'}favicon.ico`,
+      },
       {
         rel: 'stylesheet',
         href:
@@ -45,40 +39,21 @@ export default {
       },
     ],
   },
-  /*
-   ** Customize the progress-bar color
-   */
   loading: { color: '#ddd' },
-  /*
-   ** Global CSS
-   */
-  css: ['@/assets/style/main.sass'],
-  /*
-   ** Plugins to load before mounting the App
-   */
+  css: ['@/assets/style/main.scss'],
   plugins: [],
-  /*
-   ** Nuxt.js dev-modules
-   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
   ],
-  /*
-   ** Nuxt.js modules
-   */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
   ],
   styleResources: {
-    sass: ['./assets/style/_chunk.sass'],
+    scss: ['./assets/style/_chunk.scss'],
   },
-  /*
-   ** Axios module configuration
-   ** See https://axios.nuxtjs.org/options
-   */
   axios: {},
   vue: {
     config: {
@@ -86,25 +61,16 @@ export default {
       devtools: true,
     },
   },
-  /*
-   ** Serve configuration
-   */
   server: {
     port: 4000, // default: 3000
     host: 'localhost', // default: localhost
   },
   /**
-   * configuration-srcdir
+   * configuration-srcDir
    * DOC: https://ja.nuxtjs.org/api/configuration-srcdir/#__layout
    */
   srcDir: 'src/',
-  /*
-   ** Build configuration
-   */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
     babel: {
       presets({ isServer }) {
         return [
