@@ -50,6 +50,8 @@ $ yarn generate:gh-pages
 ## References
 
 - [Nuxt.js docs](https://ja.nuxtjs.org/)
-- [Vue.js Lifecycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
+- [Vue.js life cycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
 - [Sass: sass:math](https://sass-lang.com/documentation/modules/math)
 - [Pug](https://pugjs.org/api/getting-started.html)
+- [Nuxt TypeScript docs](https://typescript.nuxtjs.org/ja/).
+- [Nuxt Community TypeScript Template](https://github.com/nuxt-community/typescript-template).
