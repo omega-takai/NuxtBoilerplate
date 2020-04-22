@@ -39,7 +39,7 @@
     "@nuxtjs/axios": "5.9.7",
     "@nuxtjs/style-resources": "1.0.0",
     "core-js": "3.6.5",
-    "modern-css-reset": "1.1.0",
+    "destyle.css": "^1.0.11",
     "nuxt": "2.12.2",
     "vue-feather-icons": "5.0.0",
     "vue-styled-components": "1.4.14"

@@ -5230,6 +5230,11 @@ destroy@^1.0.4, destroy@~1.0.4:
   resolved "https://registry.yarnpkg.com/destroy/-/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+destyle.css@^1.0.11:
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/destyle.css/-/destyle.css-1.0.11.tgz#46391a267a641c7a5cef8dfe766784982f52c557"
+  integrity sha512-BmI0mIqho8BQpdhylMTK0wkfeHs+z7J9U/Cri8Cf0W8odyLiuFUIXo3vlArEjUzIDKrVjQZz1xvXu8M2Nvfy2g==
+
 detect-indent@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/detect-indent/-/detect-indent-5.0.0.tgz#3871cc0a6a002e8c3e5b3cf7f336264675f06b9d"
@@ -9398,11 +9403,6 @@ mkdirp@^0.5.3:
   integrity sha512-iG9AK/dJLtJ0XNgTuDbSyNS3zECqDlAhnQW4CsNxBG3LQJBbHmRX1egw39DmtOdCAqY+dKXV+sgPgilNWUKMVw==
   dependencies:
     minimist "^1.2.5"
-
-modern-css-reset@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/modern-css-reset/-/modern-css-reset-1.1.0.tgz#91be70bcf6b2aefed0d16e8a439ef174a5f7459a"
-  integrity sha512-JOsOWxyDiZJWhvvx0LVtY9l4MT/1tlDevBkmPbGFEvxTLGVwCOJ/f0ZoT9moTdMsrqZeShJOX/bTaUfI4WfFQw==
 
 move-concurrently@^1.0.1:
   version "1.0.1"
