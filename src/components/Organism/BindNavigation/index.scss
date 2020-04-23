@@ -7,8 +7,8 @@
       left: 1.2em;
     }
 
-    font-size: typescale('subtitle');
-    font-weight: typeweight('subtitle');
+    font-size: type-scale('subtitle');
+    font-weight: type-weight('subtitle');
 
     &.isActive {
       color: colors('accent');
