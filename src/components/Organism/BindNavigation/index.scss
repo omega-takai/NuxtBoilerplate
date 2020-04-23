@@ -5,12 +5,13 @@
     position: relative;
     padding: {
       left: 1.2em;
-    };
-    font-size: TypeScale("subtitle");
-    font-weight: TypeWeight("subtitle");
+    }
+
+    font-size: typescale('subtitle');
+    font-weight: typeweight('subtitle');
 
     &.isActive {
-      color: colors("accent");
+      color: colors('accent');
     }
 
     .icon {

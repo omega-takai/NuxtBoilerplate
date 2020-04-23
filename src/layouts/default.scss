@@ -4,7 +4,7 @@
 @value mqlDesktop: #{$mql-desktop};
 
 .root {
-  background-color: colors("background");
+  background-color: colors('background');
 }
 
 @mixin _flashAnimation {
@@ -21,7 +21,7 @@
 
 @keyframes flashA {
   0% {
-    background-color: colors("background");
+    background-color: colors('background');
   }
 
   100% {
@@ -31,7 +31,7 @@
 
 @keyframes flashB {
   0% {
-    background-color: colors("background");
+    background-color: colors('background');
   }
 
   100% {

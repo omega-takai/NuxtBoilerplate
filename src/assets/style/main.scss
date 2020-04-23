@@ -2,32 +2,32 @@
 // fileName = main.sass
 
 // Library =====================================
-@import "destyle.css/destyle";
+@import 'destyle.css/destyle';
 
-@import url("https://fonts.googleapis.com/css?family=Gelasio:500|Roboto:400,700&display=swap&subset=latin-ext");
+@import url('https://fonts.googleapis.com/css?family=Gelasio:500|Roboto:400,700&display=swap&subset=latin-ext');
 
 // Original Chunk ==============================
-@import "_chunk";
+@import '_chunk';
 
 // Style =======================================
 // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
 $_breakPoint: 560px;
 
 html {
-  color: fonts("color");
+  color: fonts('color');
   font: {
-    family: TypeFamily("normal");
-    size: #{fonts("size")}px;
-    weight: fonts("normal");
-    feature-settings: fonts("kerning");
-  };
+    family: typefamily('normal');
+    size: #{fonts('size')}px;
+    weight: fonts('normal');
+    feature-settings: fonts('kerning');
+  }
 
   // @include responsive('sp')
   //   font-size: 10px
   // @include responsive('tablet')
   //   font-size: 14px
-  @include responsive("desktop") {
-    font-size: #{fonts("size")}px;
+  @include responsive('desktop') {
+    font-size: #{fonts('size')}px;
   }
 }
 

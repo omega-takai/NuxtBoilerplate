@@ -1,29 +1,29 @@
 @mixin _structure {
-  min-height: pix2rem(48);
-  min-width: pix2rem(160);
-  padding: pix2rem(8) pix2rem(16);
-  max-width: 90vw;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: pix2rem(160);
+  max-width: 90vw;
+  min-height: pix2rem(48);
+  padding: pix2rem(8) pix2rem(16);
   line-height: 1.2;
 }
 
 @mixin _skin($_color) {
-  border-radius: pix2rem(4);
-  border: 1px solid $_color;
   color: $_color;
   text-decoration: none;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Extra
+  white-space: pre-line;
+  border: 1px solid $_color;
+  border-radius: pix2rem(4);
 
   &:hover {
     color: white;
     background-color: $_color;
   }
-
-  // Extra
-  white-space: pre-line;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
 @mixin _button($_color) {

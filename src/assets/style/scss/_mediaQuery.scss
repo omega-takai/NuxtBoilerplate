@@ -2,15 +2,12 @@
 // Mixin: Media Query
 
 // Global Vars for Media Query List
-$mql-mobile:
-  "(max-width: #{screens('small')})";
+$mql-mobile: "(max-width: #{screens('small')})";
 
-$mql-tablet:
-  "(min-width: #{screens('small') + 1px})"
+$mql-tablet: "(min-width: #{screens('small') + 1px})"
   "and (max-width: #{screens('large')})";
 
-$mql-desktop:
-  "(min-width: #{screens('large') + 1px})";
+$mql-desktop: "(min-width: #{screens('large') + 1px})";
 
 @mixin responsive($device: sp) {
   // for Mobile, SmartPhone

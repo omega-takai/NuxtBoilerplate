@@ -31,13 +31,13 @@
 
 // Style Instance ===============
 .green {
-  @include _link(#{colors("green")});
+  @include _link(#{colors('green')});
 }
 
 .grey {
-  @include _link(#{colors("inverted")});
+  @include _link(#{colors('inverted')});
 }
 
 .white {
-  @include _link(#{colors("white")});
+  @include _link(#{colors('white')});
 }

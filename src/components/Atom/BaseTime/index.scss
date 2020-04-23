@@ -1,8 +1,9 @@
 @mixin _skin {
   font: {
-    family: TypeFamily("number");
-    weight: TypeWeight("number");
-  };
+    family: typefamily('number');
+    weight: typeweight('number');
+  }
+
   line-height: 1;
   display: block;
 }
@@ -10,13 +11,13 @@
 .time {
   @include _skin;
 
-  font-size: TypeScale("h1");
-  color: colors("font");
+  font-size: typescale('h1');
+  color: colors('font');
 }
 
 .date {
   @include _skin;
 
-  font-size: TypeScale("h4");
-  color: colors("fontSub");
+  font-size: typescale('h4');
+  color: colors('fontSub');
 }
