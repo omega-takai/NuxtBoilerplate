@@ -81,6 +81,12 @@
     "sass-loader": "8.0.2",
     "sass-resources-loader": "2.0.3",
     "stylelint": "^13.3.3",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-recommended-scss": "^4.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.17.1",
     "vue-jest": "4.0.0-beta.2"
   }
 }
