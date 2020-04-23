@@ -15,6 +15,12 @@ module.exports = {
     'stylelint-prettier/recommended',
   ],
   rules: {
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: ['value'],
+      },
+    ],
     'scss/dollar-variable-pattern': patternKebab,
     'scss/percent-placeholder-pattern': patternKebab,
     'scss/at-function-pattern': patternKebab,

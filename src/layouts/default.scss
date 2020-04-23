@@ -7,16 +7,16 @@
   background-color: colors('background');
 }
 
-@mixin _flashAnimation {
-  $_inCubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+@mixin flash-animation {
+  $in-cubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
 
   animation-duration: 1.5s !important;
-  animation-timing-function: $_inCubic !important;
+  animation-play-state: running !important;
+  animation-timing-function: $in-cubic !important;
   animation-delay: 0s !important;
   animation-iteration-count: 1 !important;
   animation-direction: reverse !important;
   animation-fill-mode: none !important;
-  animation-play-state: running !important;
 }
 
 @keyframes flashA {
@@ -40,19 +40,19 @@
 }
 
 .isDesktop {
-  @include _flashAnimation;
+  @include flash-animation;
 
   animation-name: flashA !important;
 }
 
 .isTablet {
-  @include _flashAnimation;
+  @include flash-animation;
 
   animation-name: flashB !important;
 }
 
 .isMobile {
-  @include _flashAnimation;
+  @include flash-animation;
 
   animation-name: flashA !important;
 }
