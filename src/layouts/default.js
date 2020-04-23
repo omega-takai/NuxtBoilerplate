@@ -6,6 +6,8 @@ export default {
     return {
       localFlagIsMobile: true,
       localFlagIsDesktop: false,
+      mqlMobile: '(max-width: 560px)',
+      mqlDesktop: '(min-width: 961px)',
     }
   },
   computed: {
@@ -21,12 +23,14 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      const mqlMobile = window.matchMedia(this.$style.mqlMobile)
-      const mqlDesktop = window.matchMedia(this.$style.mqlDesktop)
+      const mqlMobile = window.matchMedia(this.mqlMobile)
+      const mqlDesktop = window.matchMedia(this.mqlDesktop)
       this.matchMobile(mqlMobile)
       this.matchDesktop(mqlDesktop)
       mqlMobile.addListener(this.matchMobile)
       mqlDesktop.addListener(this.matchDesktop)
+
+      console.log(mqlMobile, mqlDesktop)
     })
   },
   // TODO: Check performance addListener
