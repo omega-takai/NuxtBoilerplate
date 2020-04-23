@@ -40,7 +40,7 @@ export default {
     ],
   },
   loading: { color: '#ddd' },
-  css: ['@/assets/style/main.scss'],
+  css: ['@/assets/style/global.scss'],
   plugins: [],
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
