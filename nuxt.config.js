@@ -53,8 +53,19 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/style-resources',
   ],
+  /**
+   * Style Resources
+   * Do not import actual styles.
+   * Use this module only to import
+   * variables, mixins, functions (et cetera)
+   * as they won't exist in the actual build.
+   */
   styleResources: {
-    scss: ['./assets/style/_chunk.scss'],
+    scss: [
+      './assets/style/_variables.scss',
+      './assets/style/_mixins.scss',
+      './assets/style/_functions.scss',
+    ],
   },
   axios: {},
   vue: {

@@ -30,7 +30,11 @@ const sassLoader = {
 const sassResourcesLoader = {
   loader: 'sass-resources-loader',
   options: {
-    resources: path.resolve(__dirname, '../assets/style/_chunk.scss')
+    resources: [
+      path.resolve(__dirname, '../assets/style/_variables.scss'),
+      path.resolve(__dirname, '../assets/style/_mixins.scss'),
+      path.resolve(__dirname, '../assets/style/_functions.scss'),
+    ]
   }
 }
 
