@@ -10,8 +10,10 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "generate:gh-pages": "cross-env BASE_DIR=/NuxtBoilerplate/ nuxt generate",
-    "lint": "eslint --ext .js,.vue .",
-    "lint:fix": "yarn lint --fix",
+    "lint": "yarn lint:script && yarn lint:style",
+    "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
+    "lint:script": "eslint --ext .js,.vue .",
+    "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
     "clean": "rimraf .nuxt dist .out public",
     "test": "jest",
     "storybook": "start-storybook -c ./src/.storybook -p 6006",
@@ -19,7 +21,8 @@
     "build-storybook": "build-storybook -c ./src/.storybook -o .out"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint --fix"
+    "*.{js,vue}": "eslint --fix",
+    "*.{css,scss,vue}": "stylelint --fix"
   },
   "husky": {
     "hooks": {
@@ -49,6 +52,7 @@
     "@babel/runtime-corejs3": "7.9.2",
     "@nuxtjs/eslint-config": "2.0.2",
     "@nuxtjs/eslint-module": "1.1.0",
+    "@nuxtjs/stylelint-module": "^3.2.2",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
     "@storybook/addon-links": "5.3.18",
@@ -76,6 +80,7 @@
     "sass": "1.26.3",
     "sass-loader": "8.0.2",
     "sass-resources-loader": "2.0.3",
+    "stylelint": "^13.3.3",
     "vue-jest": "4.0.0-beta.2"
   }
 }
