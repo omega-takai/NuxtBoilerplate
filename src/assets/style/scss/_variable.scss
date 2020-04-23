@@ -1,97 +1,87 @@
-// global
-// variables
+// Default FontSize
+// root em = 1rem = 10px
+$root-font-size: 10;
 
-@import 'base';
-
-// screen size - - - - - - - - - - - - - - - -
+// screen size ==============================
 // ref: https://hashimotosan.hatenablog.jp/entry/2019/05/28/164834
 $screens: (
   'extraLarge': 1366px,
   'large': 960px,
   'small': 560px,
 );
-@function screens($key) {
-  @return map-get($screens, $key);
-}
 
-// color - - - - - - - - - - - - - - - - - - -
-$_white: whitesmoke;
-$_black: black;
-$_fonts: #333;
+// Media Query List ==============================
+$mql-mobile: "(max-width: #{map-get($screens, 'small')})";
+
+$mql-tablet: "(min-width: #{map-get($screens, 'small') + 1px})"
+  "and (max-width: #{map-get($screens, 'large')})";
+
+$mql-desktop: "(min-width: #{map-get($screens, 'large') + 1px})";
+
+// color ====================================
 $colors: (
-  'white': rgba($_white, 1),
-  'whiteAlpha': rgba($_white, 0.4),
-  'black': rgba($_black, 1),
+  'white': rgba(whitesmoke, 1),
+  'whiteAlpha': rgba(whitesmoke, 0.4),
+  'black': rgba(black, 1),
   'green': rgba(#3b8070, 1),
-  'background': rgba($_white, 1),
+  'background': rgba(whitesmoke, 1),
   'accent': rgba(blueviolet, 1),
   'inverted': rgba(#35495e, 1),
-  'font': rgba($_fonts, 1),
-  'fontSub': rgba($_fonts, 0.6),
+  'font': rgba(#333, 1),
+  'fontSub': rgba(#333, 0.6),
 );
-@function colors($key) {
-  @return map-get($colors, $key);
-}
 
-// fonts - - - - - - - - - - - - - - - - - - -
+// fonts ====================================
+// 2020年に最適なfont-familyの書き方 - ICS MEDIA
+// SEE: https://ics.media/entry/200317/
 $fonts: (
-  'color': colors(font),
+  'color': #{map-get($colors, 'font')},
   'normal': 400,
-  'bold': 700,
-  // iOS激太り対策
-    'extraBold': 900,
-  'size': $rootFontSize,
+  'bold': 600,
+  'extraBold': 900,
   'kerning': 'palt',
   'space': 0.1em,
   'lineHeight': 1.5,
 );
-@function fonts($key) {
-  @return map-get($fonts, $key);
-}
 
-$TypeFamily: (
+$type-family: (
   'normal': #{YakuHanJP,
   'Noto Sans JP',
-  '-apple-system',
-  BlinkMacSystemFont,
-  'Segoe UI',
-  'Hiragino Sans',
-  'Hiragino Kaku Gothic ProN',
+  'Helvetica Neue',
   Arial,
+  'Hiragino Kaku Gothic ProN',
+  'Hiragino Sans',
   Meiryo,
   sans-serif},
   'number': #{Gelasio,
   serif},
 );
-@function TypeFamily($key) {
-  @return map-get($TypeFamily, $key);
+
+// Like a Modular Scale ========================
+@function pix-to-rem($Number) {
+  $ratio: 1 / $root-font-size; // default 0.1
+  $computed: round($Number * $ratio * 1000) / 1000;
+  @return #{$computed}rem;
 }
 
-// Like a Modular Scale
-$TypeScale: (
-  'extra': pix2rem(177),
-  'h1': pix2rem(110),
-  'h2': pix2rem(68),
-  'h3': pix2rem(42),
-  'h4': pix2rem(26),
-  'subtitle': pix2rem(26),
-  'body': pix2rem(16),
-  'caption': pix2rem(10),
+$type-scale: (
+  'extra': pix-to-rem(177),
+  'h1': pix-to-rem(110),
+  'h2': pix-to-rem(68),
+  'h3': pix-to-rem(42),
+  'h4': pix-to-rem(26),
+  'subtitle': pix-to-rem(26),
+  'body': pix-to-rem(16),
+  'caption': pix-to-rem(10),
 );
-@function TypeScale($key) {
-  @return map-get($TypeScale, $key);
-}
 
-$TypeWeight: (
+$type-weight: (
   'extra': 900,
   'h1': 400,
   'h2': 400,
-  'h3': 700,
-  'h4': 700,
-  'subtitle': 700,
+  'h3': 600,
+  'h4': 600,
+  'subtitle': 600,
   'body': 400,
   'caption': 400,
 );
-@function TypeWeight($key) {
-  @return map-get($TypeWeight, $key);
-}
