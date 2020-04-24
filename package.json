@@ -16,9 +16,9 @@
     "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
     "clean": "rimraf .nuxt dist .out public",
     "test": "jest",
-    "storybook": "start-storybook -c ./src/.storybook -p 6006",
+    "storybook": "start-storybook -c .storybook -p 6006",
     "storybook:debug": "yarn storybook --debug-webpack",
-    "build-storybook": "build-storybook -c ./src/.storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -o .out"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --fix",

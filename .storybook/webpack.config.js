@@ -31,9 +31,9 @@ const sassResourcesLoader = {
   loader: 'sass-resources-loader',
   options: {
     resources: [
-      path.resolve(__dirname, '../assets/style/_variables.scss'),
-      path.resolve(__dirname, '../assets/style/_mixins.scss'),
-      path.resolve(__dirname, '../assets/style/_functions.scss'),
+      path.resolve(__dirname, '../src/assets/style/_variables.scss'),
+      path.resolve(__dirname, '../src/assets/style/_mixins.scss'),
+      path.resolve(__dirname, '../src/assets/style/_functions.scss'),
     ]
   }
 }
@@ -102,8 +102,8 @@ module.exports = async ({ config }) => {
   );
 
   config.resolve.alias = {
-    '~': path.join(__dirname, '../'),
-    '@': path.join(__dirname, '../'),
+    '~': path.join(__dirname, '../src/'),
+    '@': path.join(__dirname, '../src/'),
     vue$: 'vue/dist/vue.esm.js',
   }
 
