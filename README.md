@@ -14,6 +14,8 @@
 
 <https://t--takai.github.io/NuxtBoilerplate/>
 
+<https://takai-nuxt-boilerplate.netlify.app/>
+
 ## Features
 
 - Can be developed OFFLINE after `$ yarn install`
