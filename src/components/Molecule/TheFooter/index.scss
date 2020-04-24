@@ -15,15 +15,11 @@
   border-top: 1px solid colors('whiteAlpha');
 }
 
-@mixin row {
+.row {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   min-height: 2em;
-}
-
-.row {
-  @include row;
 
   &:not(:first-of-type) {
     margin-top: pix-to-rem(4);
@@ -34,20 +30,6 @@
   }
 
   > dd {
-    flex: 1 1 100%;
-  }
-}
-
-.rowMobile {
-  @include row;
-
-  flex-wrap: wrap;
-
-  &:not(:first-of-type) {
-    margin-top: pix-to-rem(8);
-  }
-
-  > dt {
     flex: 1 1 100%;
   }
 }

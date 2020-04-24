@@ -6,10 +6,6 @@ export default {
     LinkTextWithIcon,
   },
   props: {
-    isMobile: {
-      type: Boolean,
-      default: true,
-    },
     bindStatus: {
       type: String,
       default: 'Vuex Binding',
@@ -32,9 +28,6 @@ export default {
     },
   },
   computed: {
-    rowClassName() {
-      return this.isMobile ? this.$style.rowMobile : this.$style.row
-    },
     repoName() {
       const arr = this.repoUrl.split('/')
       const lastOne = arr.length - 1

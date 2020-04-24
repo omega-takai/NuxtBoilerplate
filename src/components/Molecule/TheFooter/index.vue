@@ -3,11 +3,11 @@
 <template lang="pug">
   footer(:class="$style.footer")
     dl
-      div(:class="rowClassName")
+      div(:class="$style.row")
         dt Vuex Binding
         dd
           div {{ bindStatus }}
-      div(:class="rowClassName")
+      div(:class="$style.row")
         dt GitHub
         dd
           LinkTextWithIcon(
@@ -16,7 +16,7 @@
             :text="repoName"
             :url="repoUrl"
           )
-      div(:class="rowClassName")
+      div(:class="$style.row")
         dt Author
         dd
           div {{ authorName }} ({{ authorPosition }})
