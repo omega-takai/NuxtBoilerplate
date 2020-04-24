@@ -1,10 +1,10 @@
-import VueToNuxtLogo from './index.vue'
+import TheNuxtLogo from './index.vue'
 
 export default {
-  title: 'Design System|Atom/VueToNuxtLogo',
+  title: 'Design System|Atom/TheNuxtLogo',
 }
 
 export const normal = () => ({
-  components: { VueToNuxtLogo },
-  template: '<VueToNuxtLogo />',
+  components: { TheNuxtLogo },
+  template: '<TheNuxtLogo />',
 })
