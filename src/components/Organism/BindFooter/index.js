@@ -1,11 +1,11 @@
 import { mapState } from 'vuex'
 
-import BaseFooter from '@/components/Molecule/BaseFooter/index.vue'
+import TheFooter from '~/components/Molecule/TheFooter/index.vue'
 
 export default {
   name: 'BindFooter',
   components: {
-    BaseFooter,
+    TheFooter,
   },
   computed: {
     ...mapState([

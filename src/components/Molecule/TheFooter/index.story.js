@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, text, boolean } from '@storybook/addon-knobs'
-import BaseFooter from './index.vue'
+import TheFooter from './index.vue'
 import { Wrapper } from '@/assets/styledComponent/component'
 
-const stories = storiesOf('Design System|Molecule/BaseFooter', module)
+const stories = storiesOf('Design System|Molecule/TheFooter', module)
 
 stories.addDecorator(withKnobs)
 
 stories.add('normal', () => ({
   components: {
-    BaseFooter,
+    TheFooter,
     Wrapper,
   },
   props: {
@@ -40,7 +40,7 @@ stories.add('normal', () => ({
   },
   template: `
     <Wrapper>
-      <BaseFooter
+      <TheFooter
         :isMobile="isMobile"
         :bindStatus="bindStatus"
         :repoUrl="repoUrl"

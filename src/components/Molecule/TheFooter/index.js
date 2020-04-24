@@ -1,7 +1,7 @@
 import LinkTextWithIcon from '@/components/Molecule/LinkTextWithIcon/index.vue'
 
 export default {
-  name: 'BaseFooter',
+  name: 'TheFooter',
   components: {
     LinkTextWithIcon,
   },

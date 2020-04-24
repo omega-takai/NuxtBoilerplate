@@ -1,6 +1,6 @@
 <script src="./index.js"></script>
 <template lang="pug">
-  BaseFooter(
+  TheFooter(
     :isMobile="isMobile"
     :bindStatus="statusText"
     :repoUrl="repositoryUrl"
