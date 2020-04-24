@@ -7,5 +7,5 @@
       slot
       BindNavigation(:class="$style.nav")
 
-    BindFooter(:class="$style.footer")
+    TheBindFooter(:class="$style.footer")
 </template>
