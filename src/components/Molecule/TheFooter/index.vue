@@ -5,7 +5,8 @@
     dl
       div(:class="rowClassName")
         dt Vuex Binding
-        dd {{ bindStatus }}
+        dd
+          div {{ bindStatus }}
       div(:class="rowClassName")
         dt GitHub
         dd
