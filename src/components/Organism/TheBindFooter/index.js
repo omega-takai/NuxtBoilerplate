@@ -4,7 +4,7 @@ import TheFooter from '~/components/Molecule/TheFooter/index.vue'
 import TheMobileFooter from '~/components/Molecule/TheMobileFooter/index.vue'
 
 export default {
-  name: 'BindFooter',
+  name: 'TheBindFooter',
   components: {
     TheFooter,
     TheMobileFooter,
