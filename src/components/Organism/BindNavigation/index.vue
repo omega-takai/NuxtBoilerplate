@@ -13,7 +13,7 @@
         :class="$style.listItem"
       )
         transition(appear)
-          FeatherIcon(
+          BaseFeatherIcon(
             v-if="$route.path === val.path"
             iconName="ArrowRightIcon"
             :class="$style.icon"

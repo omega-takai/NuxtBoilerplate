@@ -6,7 +6,7 @@
     :colorType="colorType"
     :text="text"
   )
-    FeatherIcon(
+    BaseFeatherIcon(
       :iconName="iconName"
       :iconSize="iconSize"
       class="icon"

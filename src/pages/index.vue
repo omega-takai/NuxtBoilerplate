@@ -7,11 +7,11 @@
         appear
         tag="div"
       )
-        VueToNuxtLogo(
+        TheNuxtLogo(
           key="logo"
           :class="$style.logo"
         )
-        Typography(
+        BaseTypography(
           :level="1"
           text="NuxtBoilerplate"
           key="title"
