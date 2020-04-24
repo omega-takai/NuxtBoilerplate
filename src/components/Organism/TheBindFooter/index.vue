@@ -1,6 +1,6 @@
 <script src="./index.js"></script>
 <template lang="pug">
-  TheFooter(
+  TheMobileFooter(
     v-if="isMobile"
     :bindStatus="statusText"
     :repoUrl="repositoryUrl"
@@ -8,7 +8,7 @@
     :authorPosition="author.position"
     :twitterUrl="author.twitterUrl"
   )
-  TheMobileFooter(
+  TheFooter(
     v-else
     :bindStatus="statusText"
     :repoUrl="repositoryUrl"
