@@ -1,0 +1,35 @@
+.footer {
+  padding: 3em 5em 1em;
+  font-size: type-scale('body');
+  font-weight: type-weight('body');
+  color: colors('white');
+  background-color: colors('inverted');
+}
+
+.copy {
+  padding: type-scale('body') 0;
+  margin-top: type-scale('body');
+  font-size: type-scale('caption');
+  font-weight: type-weight('caption');
+  text-align: center;
+  border-top: 1px solid colors('whiteAlpha');
+}
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  min-height: 2em;
+
+  &:not(:first-of-type) {
+    margin-top: pix-to-rem(4);
+  }
+
+  > dt {
+    flex: 0 0 8em;
+  }
+
+  > dd {
+    flex: 1 1 100%;
+  }
+}

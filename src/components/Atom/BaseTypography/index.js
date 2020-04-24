@@ -1,5 +1,5 @@
 export default {
-  name: 'Typography',
+  name: 'BaseTypography',
   props: {
     text: {
       type: String,

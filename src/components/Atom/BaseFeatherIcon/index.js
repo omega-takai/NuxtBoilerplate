@@ -17,7 +17,7 @@ import {
 } from 'vue-feather-icons'
 
 export default {
-  name: 'FeatherIcon',
+  name: 'BaseFeatherIcon',
   components: {
     ArrowDownLeftIcon,
     ArrowDownRightIcon,

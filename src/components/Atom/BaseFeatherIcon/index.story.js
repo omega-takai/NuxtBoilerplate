@@ -1,10 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import FeatherIcon from './index.vue'
+import BaseFeatherIcon from './index.vue'
 import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
-
-// component
 
 const iconSize = ['24', '1x', '1.5x', '2x', '3x', '4x']
 const icons = [
@@ -22,11 +20,11 @@ const icons = [
   'TwitterIcon',
 ]
 
-storiesOf('Design System|Atom/FeatherIcon', module)
+storiesOf('Design System|Atom/BaseFeatherIcon', module)
   .addDecorator(withKnobs)
   .add('normal', () => ({
     components: {
-      FeatherIcon,
+      BaseFeatherIcon,
       FlexLayout,
       FlexItem,
     },
@@ -49,7 +47,7 @@ storiesOf('Design System|Atom/FeatherIcon', module)
           :alt="name"
           :title="name"
         >
-          <FeatherIcon
+          <BaseFeatherIcon
             :iconName="name"
             :iconSize="iconSize"
             @click.native="action"

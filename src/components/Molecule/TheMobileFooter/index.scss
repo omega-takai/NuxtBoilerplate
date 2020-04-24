@@ -15,33 +15,12 @@
   border-top: 1px solid colors('whiteAlpha');
 }
 
-@mixin row {
+.rowMobile {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   min-height: 2em;
-}
-
-.row {
-  @include row;
-
-  &:not(:first-of-type) {
-    margin-top: pix-to-rem(4);
-  }
-
-  > dt {
-    flex: 0 0 8em;
-  }
-
-  > dd {
-    flex: 1 1 100%;
-  }
-}
-
-.rowMobile {
-  @include row;
-
-  flex-wrap: wrap;
 
   &:not(:first-of-type) {
     margin-top: pix-to-rem(8);

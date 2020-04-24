@@ -1,13 +1,13 @@
 import { mapState } from 'vuex'
 
 import BaseNuxtLink from '@/components/Atom/BaseNuxtLink/index.vue'
-import FeatherIcon from '@/components/Atom/FeatherIcon/index.vue'
+import BaseFeatherIcon from '@/components/Atom/BaseFeatherIcon/index.vue'
 
 export default {
   name: 'BindNavigation',
   components: {
     BaseNuxtLink,
-    FeatherIcon,
+    BaseFeatherIcon,
   },
   computed: {
     ...mapState(['isMobile', 'isTablet', 'isDesktop', 'sitemap']),

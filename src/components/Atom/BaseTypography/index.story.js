@@ -1,26 +1,26 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
-import Typography from './index.vue'
+import BaseTypography from './index.vue'
 import {
   FlexLayout,
   FlexItem,
   Wrapper,
 } from '@/assets/styledComponent/component'
 
-const stories = storiesOf('Design System|Atom/Typography', module)
+const stories = storiesOf('Design System|Atom/BaseTypography', module)
 
 stories.addDecorator(withKnobs)
 
 stories.add('normal', () => ({
   components: {
-    Typography,
+    BaseTypography,
     FlexLayout,
     FlexItem,
   },
   props: {
     text: {
       type: String,
-      default: text('text', 'Typography'),
+      default: text('text', 'BaseTypography'),
     },
     level: {
       type: Number,
@@ -30,7 +30,7 @@ stories.add('normal', () => ({
   template: `
     <FlexLayout>
       <FlexItem>
-        <Typography
+        <BaseTypography
           :text="text"
           :level="level"
         />
@@ -40,15 +40,15 @@ stories.add('normal', () => ({
 
 stories.add('gallery', () => ({
   components: {
-    Typography,
+    BaseTypography,
     Wrapper,
   },
   template: `
     <Wrapper>
-      <Typography
+      <BaseTypography
         v-for="n in 4"
         :key="n"
-        :text="'H' + n + ' Typography'"
+        :text="'H' + n + ' Fonts'"
         :level="n"
       />
     </Wrapper>`,

@@ -1,10 +1,10 @@
-import FeatherIcon from '@/components/Atom/FeatherIcon/index.vue'
+import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
 import BaseLinkText from '@/components/Atom/BaseLinkText/index.vue'
 
 export default {
   name: 'LinkTextWithIcon',
   components: {
-    FeatherIcon,
+    BaseFeatherIcon,
     BaseLinkText,
   },
   props: {
