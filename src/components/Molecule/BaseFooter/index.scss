@@ -1,21 +1,21 @@
 .footer {
-  background-color: colors("inverted");
-  color: colors("white");
-  font-size: TypeScale("body");
-  font-weight: TypeWeight("body");
   padding: 3em 5em 1em;
+  font-size: type-scale('body');
+  font-weight: type-weight('body');
+  color: colors('white');
+  background-color: colors('inverted');
 }
 
 .copy {
-  margin-top: TypeScale("body");
-  border-top: 1px solid colors("whiteAlpha");
-  padding: TypeScale("body") 0;
+  padding: type-scale('body') 0;
+  margin-top: type-scale('body');
+  font-size: type-scale('caption');
+  font-weight: type-weight('caption');
   text-align: center;
-  font-size: TypeScale("caption");
-  font-weight: TypeWeight("caption");
+  border-top: 1px solid colors('whiteAlpha');
 }
 
-@mixin _row {
+@mixin row {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -23,10 +23,10 @@
 }
 
 .row {
-  @include _row;
+  @include row;
 
   &:not(:first-of-type) {
-    margin-top: pix2rem(4);
+    margin-top: pix-to-rem(4);
   }
 
   > dt {
@@ -39,12 +39,12 @@
 }
 
 .rowMobile {
-  @include _row;
+  @include row;
 
   flex-wrap: wrap;
 
   &:not(:first-of-type) {
-    margin-top: pix2rem(8);
+    margin-top: pix-to-rem(8);
   }
 
   > dt {

@@ -1,43 +1,43 @@
-@mixin _structure {
-  padding: 0.1em;
-  max-width: 90vw;
+@mixin structure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  max-width: 90vw;
+  padding: 0.1em;
   line-height: 1.2;
 }
 
-@mixin _skin($_color) {
-  border-radius: pix2rem(4);
+@mixin skin($_color) {
   color: $_color;
   text-decoration: underline;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+
+  // Extra
+  white-space: pre-line;
+  border-radius: pix-to-rem(4);
   transition: transform 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 
   &:hover {
     text-decoration: none;
     transform: scale(1.1);
   }
-
-  // Extra
-  white-space: pre-line;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
 }
 
-@mixin _link($_color) {
-  @include _structure;
-  @include _skin($_color);
+@mixin link($_color) {
+  @include structure;
+  @include skin($_color);
 }
 
 // Style Instance ===============
 .green {
-  @include _link(#{colors("green")});
+  @include link(#{colors('green')});
 }
 
 .grey {
-  @include _link(#{colors("inverted")});
+  @include link(#{colors('inverted')});
 }
 
 .white {
-  @include _link(#{colors("white")});
+  @include link(#{colors('white')});
 }

@@ -1,25 +1,25 @@
 .layout {
-  min-height: 100vh;
   width: 100vw;
+  min-height: 100vh;
   overflow: hidden;
 
   .main {
     display: flex;
-    height: 90vh;
-    padding: {
-      right: pix2rem(16);
-      left: pix2rem(16);
-      bottom: 5vh;
-    };
-    margin: 0 auto;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    margin: 0 auto;
+    padding: {
+      right: pix-to-rem(16);
+      bottom: 5vh;
+      left: pix-to-rem(16);
+    }
 
     .nav {
       margin: {
-        top: pix2rem(16);
-      };
+        top: pix-to-rem(16);
+      }
     }
   }
 

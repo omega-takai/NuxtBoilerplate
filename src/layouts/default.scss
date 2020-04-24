@@ -1,27 +1,22 @@
-// String from Sass to JS
-@value mqlMobile: #{$mql-mobile};
-
-@value mqlDesktop: #{$mql-desktop};
-
 .root {
-  background-color: colors("background");
+  background-color: colors('background');
 }
 
-@mixin _flashAnimation {
-  $_inCubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
+@mixin flash-animation {
+  $in-cubic: cubic-bezier(0.55, 0.06, 0.68, 0.19);
 
-  animation-duration: 1.5s !important;
-  animation-timing-function: $_inCubic !important;
-  animation-delay: 0s !important;
-  animation-iteration-count: 1 !important;
-  animation-direction: reverse !important;
-  animation-fill-mode: none !important;
-  animation-play-state: running !important;
+  animation-duration: 1.5s;
+  animation-play-state: running;
+  animation-timing-function: $in-cubic;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-fill-mode: none;
 }
 
 @keyframes flashA {
   0% {
-    background-color: colors("background");
+    background-color: colors('background');
   }
 
   100% {
@@ -31,7 +26,7 @@
 
 @keyframes flashB {
   0% {
-    background-color: colors("background");
+    background-color: colors('background');
   }
 
   100% {
@@ -40,19 +35,19 @@
 }
 
 .isDesktop {
-  @include _flashAnimation;
+  @include flash-animation;
 
-  animation-name: flashA !important;
+  animation-name: flashA;
 }
 
 .isTablet {
-  @include _flashAnimation;
+  @include flash-animation;
 
-  animation-name: flashB !important;
+  animation-name: flashB;
 }
 
 .isMobile {
-  @include _flashAnimation;
+  @include flash-animation;
 
-  animation-name: flashA !important;
+  animation-name: flashA;
 }
