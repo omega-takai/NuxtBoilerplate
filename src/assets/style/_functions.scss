@@ -1,36 +1,38 @@
-@import 'variables';
+@use "sass:map";
+@use "sass:math";
+@use 'variables';
 
 // calc =======================
-$ratio: 1 / $root-font-size; // default 0.1
+$ratio: 1 / variables.$root-font-size; // default 0.1
 @function pix-to-rem($Number) {
-  $computed: round($Number * $ratio * 1000) / 1000;
+  $computed: math.round($Number * $ratio * 1000) / 1000;
   @return #{$computed}rem;
 }
 
 // screen size ======================
 @function screens($key) {
-  @return map-get($screens, $key);
+  @return map.get(variables.$screens, $key);
 }
 
 // color =======================
 @function colors($key) {
-  @return map-get($colors, $key);
+  @return map.get(variables.$colors, $key);
 }
 
 // fonts =======================
 @function fonts($key) {
-  @return map-get($fonts, $key);
+  @return map.get(variables.$fonts, $key);
 }
 
 @function type-family($key) {
-  @return map-get($type-family, $key);
+  @return map.get(variables.$type-family, $key);
 }
 
 // Like a Modular Scale =======================
 @function type-scale($key) {
-  @return map-get($type-scale, $key);
+  @return map.get(variables.$type-scale, $key);
 }
 
 @function type-weight($key) {
-  @return map-get($type-weight, $key);
+  @return map.get(variables.$type-weight, $key);
 }

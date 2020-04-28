@@ -1,23 +1,23 @@
-@import 'variables';
+@use 'variables';
 
 @mixin responsive($device: sp) {
   // for Mobile, SmartPhone
   @if $device == sp {
-    @media #{$mql-mobile} {
+    @media #{variables.$mql-mobile} {
       @content;
     }
   }
 
   // for Tablet
   @else if $device == tablet {
-    @media #{$mql-tablet} {
+    @media #{variables.$mql-tablet} {
       @content;
     }
   }
 
   // for Desktop
   @else {
-    @media #{$mql-desktop} {
+    @media #{variables.$mql-desktop} {
       @content;
     }
   }
