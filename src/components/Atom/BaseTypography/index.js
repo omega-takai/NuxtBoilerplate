@@ -2,7 +2,7 @@ export default {
   name: 'BaseTypography',
   props: {
     text: {
-      type: String,
+      type: [String, Number],
       default: '15:00',
     },
     level: {
