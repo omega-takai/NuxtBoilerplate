@@ -1,7 +1,5 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
-// eslint-disable-next-line nuxt/no-cjs-in-config
-const path = require('path')
 
 const routerBase = process.env.BASE_DIR
   ? {
@@ -90,19 +88,7 @@ export default {
         sassOptions: {
           fiber: Fiber,
         },
-        prependData: (loaderContext) => {
-          const { resourcePath, rootContext } = loaderContext
-          const relativePath = path.relative(rootContext, resourcePath)
-
-          const variables = "@use '@/assets/style/_variables';"
-          const mixins = "@use '@/assets/style/_mixins';"
-          const functions = "@use '@/assets/style/_functions';"
-
-          if (relativePath === 'src/assets/style/global.scss') {
-            return '// global.scss'
-          }
-          return variables + mixins + functions
-        },
+        prependData: "@use '@/assets/style/_not-actual-styles' as base;",
       },
     },
   },

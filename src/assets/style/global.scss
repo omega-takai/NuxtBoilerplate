@@ -1,20 +1,17 @@
 // Library =====================================
 @use 'destyle.css/destyle';
 
-// Original Utils ==============================
-@use 'variables';
-@use 'mixins';
-@use 'functions';
+@use 'not-actual-styles' as base;
 
 // Style Instance ==============================
 html {
-  color: functions.colors('font');
-  background-color: functions.colors('background');
+  color: base.colors('font');
+  background-color: base.colors('background');
   font: {
-    family: functions.type-family('normal');
-    feature-settings: functions.fonts('kerning');
-    size: #{variables.$root-font-size}px;
-    weight: functions.fonts('normal');
+    family: base.type-family('normal');
+    feature-settings: base.fonts('kerning');
+    size: #{base.$root-font-size}px;
+    weight: base.fonts('normal');
   }
 }
 
