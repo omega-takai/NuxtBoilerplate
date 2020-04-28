@@ -1,4 +1,5 @@
 <script src="@/assets/script/layouts/error.js"></script>
+<style lang="scss" module src="@/assets/style/layouts/error.scss"></style>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -12,29 +13,3 @@
 
     TheBindFooter(:class="$style.footer")
 </template>
-
-<style module lang="scss">
-.layout {
-  width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
-
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    margin: 0 auto;
-    padding: {
-      right: pix-to-rem(16);
-      bottom: 5vh;
-      left: pix-to-rem(16);
-    }
-  }
-
-  .footer {
-    min-height: 10vh;
-  }
-}
-</style>
