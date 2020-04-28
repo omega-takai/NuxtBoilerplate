@@ -41,7 +41,6 @@
   ],
   "dependencies": {
     "@nuxtjs/axios": "5.9.7",
-    "@nuxtjs/style-resources": "1.0.0",
     "core-js": "3.6.5",
     "destyle.css": "1.0.11",
     "nuxt": "2.12.2",
@@ -81,7 +80,6 @@
     "sass": "1.26.5",
     "sass-loader": "8.0.2",
     "sass-migrator": "^1.2.0",
-    "sass-resources-loader": "2.0.3",
     "stylelint": "13.3.3",
     "stylelint-config-prettier": "8.0.1",
     "stylelint-config-recess-order": "2.0.4",

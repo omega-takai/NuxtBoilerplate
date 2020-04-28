@@ -53,22 +53,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    // '@nuxtjs/style-resources',
   ],
-  /**
-   * Style Resources
-   * Do not import actual styles.
-   * Use this module only to import
-   * variables, mixins, functions (et cetera)
-   * as they won't exist in the actual build.
-   */
-  // styleResources: {
-  //   scss: [
-  //     './assets/style/_variables.scss',
-  //     './assets/style/_mixins.scss',
-  //     './assets/style/_functions.scss',
-  //   ],
-  // },
   axios: {},
   vue: {
     config: {
@@ -105,25 +90,18 @@ export default {
         sassOptions: {
           fiber: Fiber,
         },
-        // prependData: () => {
-        //   const data01 = "@use '@/assets/style/_variables';"
-        //   const data02 = "@use '@/assets/style/_mixins';"
-        //   const data03 = "@use '@/assets/style/_functions';"
-        //   return data01 + data02 + data03
-        // }
         prependData: (loaderContext) => {
-          // More information about available properties https://webpack.js.org/api/loaders/
           const { resourcePath, rootContext } = loaderContext
           const relativePath = path.relative(rootContext, resourcePath)
-          console.log('prependData', relativePath)
-          const data01 = "@use '@/assets/style/_variables';"
-          const data02 = "@use '@/assets/style/_mixins';"
-          const data03 = "@use '@/assets/style/_functions';"
+
+          const variables = "@use '@/assets/style/_variables';"
+          const mixins = "@use '@/assets/style/_mixins';"
+          const functions = "@use '@/assets/style/_functions';"
 
           if (relativePath === 'src/assets/style/global.scss') {
             return '// global.scss'
           }
-          return data01 + data02 + data03
+          return variables + mixins + functions
         },
       },
     },
