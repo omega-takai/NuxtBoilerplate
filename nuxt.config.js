@@ -1,5 +1,7 @@
 import Sass from 'sass'
 import Fiber from 'fibers'
+// eslint-disable-next-line nuxt/no-cjs-in-config
+const path = require('path')
 
 const routerBase = process.env.BASE_DIR
   ? {
@@ -51,7 +53,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/style-resources',
+    // '@nuxtjs/style-resources',
   ],
   /**
    * Style Resources
@@ -60,13 +62,13 @@ export default {
    * variables, mixins, functions (et cetera)
    * as they won't exist in the actual build.
    */
-  styleResources: {
-    scss: [
-      './assets/style/_variables.scss',
-      './assets/style/_mixins.scss',
-      './assets/style/_functions.scss',
-    ],
-  },
+  // styleResources: {
+  //   scss: [
+  //     './assets/style/_variables.scss',
+  //     './assets/style/_mixins.scss',
+  //     './assets/style/_functions.scss',
+  //   ],
+  // },
   axios: {},
   vue: {
     config: {
@@ -102,6 +104,26 @@ export default {
         implementation: Sass,
         sassOptions: {
           fiber: Fiber,
+        },
+        // prependData: () => {
+        //   const data01 = "@use '@/assets/style/_variables';"
+        //   const data02 = "@use '@/assets/style/_mixins';"
+        //   const data03 = "@use '@/assets/style/_functions';"
+        //   return data01 + data02 + data03
+        // }
+        prependData: (loaderContext) => {
+          // More information about available properties https://webpack.js.org/api/loaders/
+          const { resourcePath, rootContext } = loaderContext
+          const relativePath = path.relative(rootContext, resourcePath)
+          console.log('prependData', relativePath)
+          const data01 = "@use '@/assets/style/_variables';"
+          const data02 = "@use '@/assets/style/_mixins';"
+          const data03 = "@use '@/assets/style/_functions';"
+
+          if (relativePath === 'src/assets/style/global.scss') {
+            return '// global.scss'
+          }
+          return data01 + data02 + data03
         },
       },
     },
