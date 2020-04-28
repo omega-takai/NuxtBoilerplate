@@ -2,7 +2,7 @@
 <style lang="scss" module src="./index.scss"></style>
 <template lang="pug">
   BaseLayout
-    template(v-slot:default)
+    template(#default)
       transition-group(
         appear
         tag="div"
