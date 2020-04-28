@@ -10,13 +10,8 @@ export default {
     TheMobileFooter,
   },
   computed: {
-    ...mapState([
-      'isMobile',
-      'isTablet',
-      'isDesktop',
-      'author',
-      'repositoryUrl',
-    ]),
+    ...mapState(['author', 'repositoryUrl']),
+    ...mapState('device-type', ['isMobile', 'isTablet', 'isDesktop']),
     statusText() {
       let text = 'isMobile'
       if (this.isTablet) {

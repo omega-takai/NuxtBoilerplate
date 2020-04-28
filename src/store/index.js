@@ -1,14 +1,4 @@
-// Utils ==============================
-// const zeroPadding = (num, length = 2) => {
-//   const stringNumber = ('0000' + num).slice(-length)
-//   return stringNumber
-// }
-
-// Vuex Modules ==============================
 export const state = () => ({
-  isDesktop: false,
-  isTablet: false,
-  isMobile: true,
   repositoryUrl: 'https://github.com/t--takai/NuxtBoilerplate',
   author: {
     name: 'Tomonari Takai',
@@ -29,22 +19,6 @@ export const state = () => ({
 
 export const getters = {}
 
-export const mutations = {
-  setDeviceFlag: (state, deviceType) => {
-    state.isDesktop = deviceType === 'desktop'
-    state.isTablet = deviceType === 'tablet'
-    state.isMobile = deviceType === 'mobile'
-  },
-}
+export const mutations = {}
 
-export const actions = {
-  setFlagMobile({ commit }) {
-    commit('setDeviceFlag', 'mobile')
-  },
-  setFlagTablet({ commit }) {
-    commit('setDeviceFlag', 'tablet')
-  },
-  setFlagDesktop({ commit }) {
-    commit('setDeviceFlag', 'desktop')
-  },
-}
+export const actions = {}

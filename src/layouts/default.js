@@ -9,7 +9,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['isMobile', 'isTablet', 'isDesktop']),
+    ...mapState('device-type', ['isMobile', 'isTablet', 'isDesktop']),
     classNameObject() {
       return {
         [this.$style.root]: true,
