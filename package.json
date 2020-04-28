@@ -16,6 +16,7 @@
     "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
     "clean": "rimraf .nuxt dist .out public",
     "test": "jest",
+    "style-migration": "sass-migrator --load-path node_modules module --verbose --migrate-deps",
     "storybook": "start-storybook -c .storybook -p 6006",
     "storybook:debug": "yarn storybook --debug-webpack",
     "build-storybook": "build-storybook -c .storybook -o .out"
