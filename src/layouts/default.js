@@ -33,7 +33,11 @@ export default {
     })
   },
   methods: {
-    ...mapActions(['setFlagMobile', 'setFlagTablet', 'setFlagDesktop']),
+    ...mapActions('device-type', [
+      'setFlagMobile',
+      'setFlagTablet',
+      'setFlagDesktop',
+    ]),
     matchMobile(mql) {
       if (mql.matches) {
         this.setFlagMobile()

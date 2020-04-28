@@ -10,11 +10,7 @@ export default {
     BaseFeatherIcon,
   },
   computed: {
-    ...mapState('device-type', [
-      'isMobile',
-      'isTablet',
-      'isDesktop',
-      'sitemap',
-    ]),
+    ...mapState('device-type', ['isMobile', 'isTablet', 'isDesktop']),
+    ...mapState('pages', ['sitemap']),
   },
 }
