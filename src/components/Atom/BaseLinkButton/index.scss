@@ -2,10 +2,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: functions.pix-to-rem(160);
+  min-width: base.pix-to-rem(160);
   max-width: 90vw;
-  min-height: functions.pix-to-rem(48);
-  padding: functions.pix-to-rem(8) functions.pix-to-rem(16);
+  min-height: base.pix-to-rem(48);
+  padding: base.pix-to-rem(8) base.pix-to-rem(16);
   line-height: 1.2;
 }
 
@@ -18,7 +18,7 @@
   // Extra
   white-space: pre-line;
   border: 1px solid $_color;
-  border-radius: functions.pix-to-rem(4);
+  border-radius: base.pix-to-rem(4);
 
   &:hover {
     color: white;

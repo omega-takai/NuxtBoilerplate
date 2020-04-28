@@ -1,8 +1,6 @@
 // Library =====================================
 @use 'destyle.css/destyle';
 
-@use 'not-actual-styles' as base;
-
 // Style Instance ==============================
 html {
   color: base.colors('font');

@@ -60,21 +60,21 @@ $type-family: (
 );
 
 // Like a Modular Scale ========================
-@function pix-to-rem($Number) {
+@function variables-pix-to-rem($Number) {
   $ratio: 1 / $root-font-size; // default 0.1
   $computed: math.round($Number * $ratio * 1000) / 1000;
   @return #{$computed}rem;
 }
 
 $type-scale: (
-  'extra': pix-to-rem(177),
-  'h1': pix-to-rem(110),
-  'h2': pix-to-rem(68),
-  'h3': pix-to-rem(42),
-  'h4': pix-to-rem(26),
-  'subtitle': pix-to-rem(26),
-  'body': pix-to-rem(16),
-  'caption': pix-to-rem(10),
+  'extra': variables-pix-to-rem(177),
+  'h1': variables-pix-to-rem(110),
+  'h2': variables-pix-to-rem(68),
+  'h3': variables-pix-to-rem(42),
+  'h4': variables-pix-to-rem(26),
+  'subtitle': variables-pix-to-rem(26),
+  'body': variables-pix-to-rem(16),
+  'caption': variables-pix-to-rem(10),
 );
 
 $type-weight: (
