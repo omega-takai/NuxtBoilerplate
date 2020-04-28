@@ -28,7 +28,7 @@
     "hooks": {
       "pre-commit": "lint-staged",
       "post-merge": "yarn clean && yarn install",
-      "post-checkout": "yarn clean && yarn install",
+      "post-checkout": "yarn clean",
       "post-rebase": "yarn clean && yarn install",
       "pre-auto-gc": "yarn clean"
     }
