@@ -2,7 +2,7 @@
   display: block;
   max-width: 100vw;
   line-height: 1.15;
-  color: colors('font');
+  color: functions.colors('font');
   word-wrap: break-word;
   overflow-wrap: break-word;
 
@@ -13,27 +13,27 @@
 .h1 {
   @include typography;
 
-  font-size: type-scale('h1');
-  font-weight: type-weight('h1');
+  font-size: functions.type-scale('h1');
+  font-weight: functions.type-weight('h1');
 }
 
 .h2 {
   @include typography;
 
-  font-size: type-scale('h2');
-  font-weight: type-weight('h2');
+  font-size: functions.type-scale('h2');
+  font-weight: functions.type-weight('h2');
 }
 
 .h3 {
   @include typography;
 
-  font-size: type-scale('h3');
-  font-weight: type-weight('h3');
+  font-size: functions.type-scale('h3');
+  font-weight: functions.type-weight('h3');
 }
 
 .h4 {
   @include typography;
 
-  font-size: type-scale('h4');
-  font-weight: type-weight('h4');
+  font-size: functions.type-scale('h4');
+  font-weight: functions.type-weight('h4');
 }

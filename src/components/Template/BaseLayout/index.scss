@@ -11,14 +11,14 @@
     height: 90vh;
     margin: 0 auto;
     padding: {
-      right: pix-to-rem(16);
+      right: functions.pix-to-rem(16);
       bottom: 5vh;
-      left: pix-to-rem(16);
+      left: functions.pix-to-rem(16);
     }
 
     .nav {
       margin: {
-        top: pix-to-rem(16);
+        top: functions.pix-to-rem(16);
       }
     }
   }

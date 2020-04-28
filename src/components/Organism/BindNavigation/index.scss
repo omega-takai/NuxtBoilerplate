@@ -7,11 +7,11 @@
       left: 1.2em;
     }
 
-    font-size: type-scale('subtitle');
-    font-weight: type-weight('subtitle');
+    font-size: functions.type-scale('subtitle');
+    font-weight: functions.type-weight('subtitle');
 
     &.isActive {
-      color: colors('accent');
+      color: functions.colors('accent');
     }
 
     .icon {

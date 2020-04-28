@@ -15,7 +15,7 @@
 
   // Extra
   white-space: pre-line;
-  border-radius: pix-to-rem(4);
+  border-radius: functions.pix-to-rem(4);
   transition: transform 0.1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
 
   &:hover {
@@ -31,13 +31,13 @@
 
 // Style Instance ===============
 .green {
-  @include link(#{colors('green')});
+  @include link(#{functions.colors('green')});
 }
 
 .grey {
-  @include link(#{colors('inverted')});
+  @include link(#{functions.colors('inverted')});
 }
 
 .white {
-  @include link(#{colors('white')});
+  @include link(#{functions.colors('white')});
 }
