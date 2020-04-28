@@ -1,3 +1,4 @@
+<script src="@/assets/script/layouts/error.js"></script>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -11,43 +12,6 @@
 
     TheBindFooter(:class="$style.footer")
 </template>
-
-<script>
-/**
- * DOC: https://ja.nuxtjs.org/guide/views/#エラーページ
- */
-import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
-import TheBindFooter from '~/components/Organism/TheBindFooter/index.vue'
-import BaseNuxtLink from '@/components/Atom/BaseNuxtLink/index.vue'
-
-export default {
-  name: 'Error',
-  components: {
-    BaseTypography,
-    TheBindFooter,
-    BaseNuxtLink,
-  },
-  props: {
-    error: {
-      type: Object,
-      default: null,
-    },
-  },
-  computed: {
-    statusCode() {
-      return (this.error && this.error.statusCode) || 500
-    },
-    message() {
-      return this.error.message || '<%= messages.client_error %>'
-    },
-  },
-  head() {
-    return {
-      title: this.message,
-    }
-  },
-}
-</script>
 
 <style module lang="scss">
 .layout {
