@@ -89,7 +89,7 @@
     "stylelint-prettier": "1.1.2",
     "stylelint-scss": "3.17.1",
     "typescript": "^3.8.3",
-    "vue-jest": "5.0.0-alpha.0",
+    "vue-jest": "git+https://github.com/vuejs/vue-jest#master",
     "vue-template-compiler": "^2.6.11"
   }
 }
