@@ -1,10 +1,4 @@
 module.exports = {
-  // testEnvironment: 'node',
-  // globals: {
-  //   'vue-jest': {
-  //     experimentalCSSCompile: true,
-  //   },
-  // },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^~/(.*)$': '<rootDir>/src/$1',
@@ -14,7 +8,17 @@ module.exports = {
   transform: {
     '^.+\\.js$': 'babel-jest',
     '.*\\.(vue)$': 'vue-jest',
+    '.+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$':
+      'jest-transform-stub',
   },
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/components/**/*.vue'],
+  globals: {
+    'vue-jest': {
+      resources: {
+        scss: ['./src/assets/style/_not-actual-styles.scss'],
+      },
+      experimentalCSSCompile: true,
+    },
+  },
 }

@@ -48,8 +48,7 @@
     "vue-styled-components": "1.4.14"
   },
   "devDependencies": {
-    "@babel/core": "7.9.0",
-    "@babel/runtime-corejs3": "7.9.2",
+    "@babel/runtime-corejs3": "^7.9.2",
     "@nuxtjs/eslint-config": "2.0.2",
     "@nuxtjs/eslint-module": "1.1.0",
     "@nuxtjs/stylelint-module": "3.2.2",
@@ -58,11 +57,13 @@
     "@storybook/addon-links": "5.3.18",
     "@storybook/addons": "5.3.18",
     "@storybook/vue": "5.3.18",
+    "@vue/compiler-sfc": "^3.0.0-beta.4",
     "@vue/test-utils": "1.0.0-beta.33",
-    "babel-eslint": "10.1.0",
-    "babel-jest": "25.3.0",
-    "babel-loader": "8.1.0",
-    "babel-preset-vue": "2.0.2",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.5.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-vue": "^2.0.2",
     "cross-env": "7.0.2",
     "eslint": "6.8.0",
     "eslint-config-prettier": "6.10.1",
@@ -71,6 +72,7 @@
     "fibers": "4.0.3",
     "husky": "4.2.5",
     "jest": "25.3.0",
+    "jest-transform-stub": "^2.0.0",
     "lint-staged": "10.1.7",
     "prettier": "2.0.5",
     "pug": "2.0.4",
@@ -86,6 +88,8 @@
     "stylelint-config-standard": "20.0.0",
     "stylelint-prettier": "1.1.2",
     "stylelint-scss": "3.17.1",
-    "vue-jest": "4.0.0-beta.2"
+    "typescript": "^3.8.3",
+    "vue-jest": "5.0.0-alpha.0",
+    "vue-template-compiler": "^2.6.11"
   }
 }
