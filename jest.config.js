@@ -1,4 +1,10 @@
 module.exports = {
+  // testEnvironment: 'node',
+  // globals: {
+  //   'vue-jest': {
+  //     experimentalCSSCompile: true,
+  //   },
+  // },
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^~/(.*)$': '<rootDir>/src/$1',
