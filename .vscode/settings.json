@@ -3,6 +3,13 @@
     "Hiragino",
     "Meiryo",
     "Yaku",
-    "mixins"
+    "mixins",
+    "styl"
+  ],
+  "cSpell.ignorePaths": [
+    "node_modules",
+    "vscode-extension",
+    "yarn.lock",
+    ".git"
   ]
 }
