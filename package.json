@@ -40,19 +40,19 @@
     "IE 11"
   ],
   "dependencies": {
-    "@nuxtjs/axios": "5.9.7",
+    "@nuxtjs/axios": "5.10.3",
     "core-js": "3.6.5",
     "destyle.css": "1.0.11",
     "nuxt": "2.12.2",
     "vue-feather-icons": "5.0.0",
-    "vue-styled-components": "1.4.14"
+    "vue-styled-components": "1.5.1"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
     "@babel/runtime-corejs3": "^7.9.6",
     "@nuxtjs/eslint-config": "2.0.2",
-    "@nuxtjs/eslint-module": "1.1.0",
+    "@nuxtjs/eslint-module": "1.2.0",
     "@nuxtjs/stylelint-module": "3.2.2",
     "@storybook/addon-actions": "5.3.18",
     "@storybook/addon-knobs": "5.3.18",
@@ -66,14 +66,14 @@
     "babel-preset-vue": "^2.0.2",
     "cross-env": "7.0.2",
     "eslint": "6.8.0",
-    "eslint-config-prettier": "6.10.1",
+    "eslint-config-prettier": "6.11.0",
     "eslint-plugin-nuxt": "0.5.2",
     "eslint-plugin-prettier": "3.1.3",
-    "fibers": "4.0.3",
+    "fibers": "^5.0.0",
     "husky": "4.2.5",
     "jest": "25.3.0",
     "jest-transform-stub": "^2.0.0",
-    "lint-staged": "10.1.7",
+    "lint-staged": "10.2.2",
     "prettier": "2.0.5",
     "pug": "2.0.4",
     "pug-plain-loader": "1.0.0",
@@ -87,8 +87,9 @@
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-prettier": "1.1.2",
-    "stylelint-scss": "3.17.1",
     "vue-jest": "git+https://github.com/vuejs/vue-jest.git",
+    "stylelint-scss": "3.17.2",
+    "typescript": "^3.8.3",
     "vue-template-compiler": "^2.6.11"
   }
 }
