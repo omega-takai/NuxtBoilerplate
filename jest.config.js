@@ -13,12 +13,29 @@ module.exports = {
   },
   collectCoverage: true,
   collectCoverageFrom: ['<rootDir>/src/components/**/*.vue'],
+  // testEnvironment: 'node',
   globals: {
     'vue-jest': {
+      babelConfig: {
+        // presets: ['@babel/env'],
+        presets: [
+          [
+            '@babel/preset-env',
+            {
+              targets: {
+                node: 'current',
+              },
+            },
+          ],
+        ],
+      },
       resources: {
         scss: ['./src/assets/style/_not-actual-styles.scss'],
       },
       experimentalCSSCompile: true,
+      // pug: {
+      //   basedir: './',
+      // },
     },
   },
 }
