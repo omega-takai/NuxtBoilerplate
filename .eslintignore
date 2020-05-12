@@ -7,6 +7,10 @@ jspm_packages/
 
 # Nuxt generate
 dist
+public
 
-# Nuxt generate for GitHub Pages
-docs
+# Coverage directory used by tools like istanbul
+coverage
+
+# Storybook generate
+.out
