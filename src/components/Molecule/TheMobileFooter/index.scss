@@ -1,18 +1,18 @@
 .footer {
   padding: 3em 5em 1em;
-  font-size: type-scale('body');
-  font-weight: type-weight('body');
-  color: colors('white');
-  background-color: colors('inverted');
+  font-size: base.type-scale('body');
+  font-weight: base.type-weight('body');
+  color: base.colors('white');
+  background-color: base.colors('inverted');
 }
 
 .copy {
-  padding: type-scale('body') 0;
-  margin-top: type-scale('body');
-  font-size: type-scale('caption');
-  font-weight: type-weight('caption');
+  padding: base.type-scale('body') 0;
+  margin-top: base.type-scale('body');
+  font-size: base.type-scale('caption');
+  font-weight: base.type-weight('caption');
   text-align: center;
-  border-top: 1px solid colors('whiteAlpha');
+  border-top: 1px solid base.colors('whiteAlpha');
 }
 
 .rowMobile {
@@ -23,7 +23,7 @@
   min-height: 2em;
 
   &:not(:first-of-type) {
-    margin-top: pix-to-rem(8);
+    margin-top: base.pix-to-rem(8);
   }
 
   > dt {

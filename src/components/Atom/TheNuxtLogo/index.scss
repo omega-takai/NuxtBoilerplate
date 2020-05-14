@@ -36,7 +36,7 @@
     @include triangle(60, 35);
 
     border-right: 70px solid transparent;
-    border-bottom: 120px solid colors('inverted');
+    border-bottom: 120px solid base.colors('inverted');
     border-left: 70px solid transparent;
     animation: go-right 0.5s linear forwards 3.5s;
   }
@@ -45,7 +45,7 @@
     @include triangle(120, 70);
 
     border-right: 35px solid transparent;
-    border-bottom: 60px solid colors('background');
+    border-bottom: 60px solid base.colors('background');
     border-left: 35px solid transparent;
     animation: go-down 0.5s linear forwards 3s;
   }

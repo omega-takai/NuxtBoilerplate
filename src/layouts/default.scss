@@ -1,5 +1,5 @@
 .root {
-  background-color: colors('background');
+  background-color: base.colors('background');
 }
 
 @mixin flash-animation {
@@ -16,7 +16,7 @@
 
 @keyframes flashA {
   0% {
-    background-color: colors('background');
+    background-color: base.colors('background');
   }
 
   100% {
@@ -26,7 +26,7 @@
 
 @keyframes flashB {
   0% {
-    background-color: colors('background');
+    background-color: base.colors('background');
   }
 
   100% {

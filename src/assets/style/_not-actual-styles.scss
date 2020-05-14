@@ -1,0 +1,6 @@
+// DOC: https://sass-lang.com/documentation/at-rules/forward
+// DOC: https://sass-lang.com/documentation/at-rules/use
+
+@forward '@/assets/style/not-actual-styles/_variables';
+@forward '@/assets/style/not-actual-styles/_mixins';
+@forward '@/assets/style/not-actual-styles/_functions';

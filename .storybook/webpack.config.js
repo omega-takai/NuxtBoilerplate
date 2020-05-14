@@ -16,6 +16,7 @@ const cssLoaderModule = {
     },
   },
 }
+
 const sassLoader = {
   loader: 'sass-loader',
   options: {
@@ -24,18 +25,8 @@ const sassLoader = {
     sassOptions: {
       fiber: require('fibers'),
     },
+    prependData: "@use '@/assets/style/_not-actual-styles' as base;",
   },
-}
-
-const sassResourcesLoader = {
-  loader: 'sass-resources-loader',
-  options: {
-    resources: [
-      path.resolve(__dirname, '../src/assets/style/_variables.scss'),
-      path.resolve(__dirname, '../src/assets/style/_mixins.scss'),
-      path.resolve(__dirname, '../src/assets/style/_functions.scss'),
-    ]
-  }
 }
 
 // Export a function. Accept the base config as the only param.
@@ -57,7 +48,6 @@ module.exports = async ({ config }) => {
             'vue-style-loader',
             cssLoaderModule,
             sassLoader,
-            sassResourcesLoader,
           ],
         },
         {
@@ -65,7 +55,6 @@ module.exports = async ({ config }) => {
             'vue-style-loader',
             cssLoader,
             sassLoader,
-            sassResourcesLoader,
           ],
         },
       ],
