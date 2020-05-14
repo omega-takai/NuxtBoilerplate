@@ -4,6 +4,8 @@
     "Meiryo",
     "Yaku",
     "mixins",
+    "nuxt",
+    "nuxtjs",
     "styl"
   ],
   "cSpell.ignorePaths": [
