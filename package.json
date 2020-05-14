@@ -61,7 +61,7 @@
     "@vue/test-utils": "1.0.0-beta.33",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.1.0",
-    "babel-jest": "^25.5.0",
+    "babel-jest": "25.3.0",
     "babel-loader": "^8.1.0",
     "babel-preset-vue": "^2.0.2",
     "cross-env": "7.0.2",
@@ -87,9 +87,9 @@
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-prettier": "1.1.2",
-    "vue-jest": "git+https://github.com/vuejs/vue-jest.git",
     "stylelint-scss": "3.17.2",
     "typescript": "^3.8.3",
+    "vue-jest": "git+https://github.com/vuejs/vue-jest.git",
     "vue-template-compiler": "^2.6.11"
   }
 }
