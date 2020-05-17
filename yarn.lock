@@ -770,7 +770,7 @@
     "@babel/types" "^7.4.4"
     esutils "^2.0.2"
 
-"@babel/runtime-corejs3@^7.9.2":
+"@babel/runtime-corejs3@7.9.2":
   version "7.9.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime-corejs3/-/runtime-corejs3-7.9.2.tgz#26fe4aa77e9f1ecef9b776559bbb8e84d34284b7"
   integrity sha512-HHxmgxbIzOfFlZ+tdeRKtaxWOMUoCG5Mu3wKeUmOxjYrwb3AAHgnmtCUbPPK11/raIWLIBK250t8E2BPO0p7jA==
@@ -1935,7 +1935,7 @@
     "@vue/compiler-core" "3.0.0-beta.4"
     "@vue/shared" "3.0.0-beta.4"
 
-"@vue/compiler-sfc@^3.0.0-beta.4":
+"@vue/compiler-sfc@3.0.0-beta.4":
   version "3.0.0-beta.4"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.0.0-beta.4.tgz#057e7269effd390959b20190d30b39f3adab90e7"
   integrity sha512-XTXPxU8Rr+C2UHaWd7LhFG7yM56uu1gFq3UpBDA6DC3ME7Na08j43/e/r8f3jb3vYZl4yRB1HT1UInYnnb5j8Q==
@@ -2560,7 +2560,7 @@ babel-code-frame@^6.22.0:
     esutils "^2.0.2"
     js-tokens "^3.0.2"
 
-babel-eslint@^10.1.0:
+babel-eslint@10.1.0:
   version "10.1.0"
   resolved "https://registry.yarnpkg.com/babel-eslint/-/babel-eslint-10.1.0.tgz#6968e568a910b78fb3779cdd8b6ac2f479943232"
   integrity sha512-ifWaTHQ0ce+448CYop8AdrQiBsGrnC+bMgfyKFdi6EsPLTAWG+QfyDeM6OH+FmWnKvEq5NnBMLvlBUPKQZoDSg==
@@ -2612,7 +2612,7 @@ babel-helper-vue-jsx-merge-props@^2.0.2:
   resolved "https://registry.yarnpkg.com/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-2.0.3.tgz#22aebd3b33902328e513293a8e4992b384f9f1b6"
   integrity sha512-gsLiKK7Qrb7zYJNgiXKpXblxbV5ffSwR0f5whkPAaBAR4fhi6bwRZxX9wBlIc5M/v8CCkXUbXZL4N/nSE97cqg==
 
-babel-loader@^8.1.0:
+babel-loader@8.1.0, babel-loader@^8.1.0:
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/babel-loader/-/babel-loader-8.1.0.tgz#c611d5112bd5209abe8b9fa84c3e4da25275f1c3"
   integrity sha512-7q7nC1tYOrqvUrN3LQK4GwSk/TQorZSOlO9C+RZDZpODgyN4ZlCqE5q9cDsyWOliN+aU9B4JX01xK9eJXowJLw==
@@ -2850,7 +2850,7 @@ babel-plugin-transform-vue-jsx@^3.5.0:
     babel-plugin-transform-undefined-to-void "^6.9.4"
     lodash "^4.17.11"
 
-babel-preset-vue@^2.0.2:
+babel-preset-vue@2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/babel-preset-vue/-/babel-preset-vue-2.0.2.tgz#cfadf1bd736125397481b5f8525ced0049a0c71f"
   integrity sha1-z63xvXNhJTl0gbX4UlztAEmgxx8=
@@ -5360,7 +5360,7 @@ fbjs@^0.8.12:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-fibers@^5.0.0:
+fibers@5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/fibers/-/fibers-5.0.0.tgz#3a60e0695b3ee5f6db94e62726716fa7a59acc41"
   integrity sha512-UpGv/YAZp7mhKHxDvC1tColrroGRX90sSvh8RMZV9leo+e5+EkRVgCEZPlmXeo3BUNQTZxUaVdLskq1Q2FyCPg==
@@ -10498,7 +10498,7 @@ sass-loader@8.0.2:
     schema-utils "^2.6.1"
     semver "^6.3.0"
 
-sass-migrator@^1.2.0:
+sass-migrator@1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/sass-migrator/-/sass-migrator-1.2.0.tgz#78834190465ec38ad3233df0776bd00799ece2f1"
   integrity sha512-U2l92tCn4bvBGDj9B9y+L3hc2q82eBhkUQIZPztzJD0pZ1etswEyaiIboyef89TEUaFKtZ1RJlhp2frDvp30LA==
