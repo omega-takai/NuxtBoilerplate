@@ -56,7 +56,7 @@
     "@storybook/addon-links": "5.3.18",
     "@storybook/addons": "5.3.18",
     "@storybook/vue": "5.3.18",
-    "@vue/compiler-sfc": "3.0.0-beta.4",
+    "@vue/compiler-sfc": "3.0.0-beta.13",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
     "babel-preset-vue": "2.0.2",
