@@ -47,7 +47,7 @@
     "vue-styled-components": "1.5.1"
   },
   "devDependencies": {
-    "@babel/runtime-corejs3": "7.9.6",
+    "@babel/runtime-corejs3": "7.10.2",
     "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/stylelint-module": "3.2.2",
