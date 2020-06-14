@@ -50,7 +50,7 @@
     "@babel/runtime-corejs3": "7.10.2",
     "@nuxtjs/eslint-config": "3.0.0",
     "@nuxtjs/eslint-module": "2.0.0",
-    "@nuxtjs/stylelint-module": "3.2.2",
+    "@nuxtjs/stylelint-module": "4.0.0",
     "@storybook/addon-actions": "5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-links": "5.3.19",
