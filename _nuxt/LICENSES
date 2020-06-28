@@ -1,5 +1,5 @@
 /*!
-  * vue-router v3.1.6
+  * vue-router v3.3.4
   * (c) 2020 Evan You
   * @license MIT
   */
@@ -22,8 +22,8 @@
  * Released under the MIT License.
  */
 
-/**
- * vuex v3.3.0
+/*!
+ * vuex v3.4.0
  * (c) 2020 Evan You
  * @license MIT
  */
