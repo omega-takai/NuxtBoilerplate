@@ -1,11 +1,11 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, text, number } from '@storybook/addon-knobs'
-import BaseTypography from './index.vue'
 import {
   FlexLayout,
   FlexItem,
   Wrapper,
 } from '@/assets/styledComponent/component'
+import BaseTypography from './index.vue'
 
 const stories = storiesOf('Design System|Atom/BaseTypography', module)
 

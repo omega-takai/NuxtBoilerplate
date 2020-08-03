@@ -1,5 +1,5 @@
-import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
 import BaseLinkText from '@/components/Atom/BaseLinkText/index.vue'
+import BaseFeatherIcon from '~/components/Atom/BaseFeatherIcon/index.vue'
 
 export default {
   name: 'LinkTextWithIcon',
