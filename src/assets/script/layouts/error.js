@@ -1,9 +1,9 @@
 /**
  * DOC: https://ja.nuxtjs.org/guide/views/#エラーページ
  */
+import BaseNuxtLink from '@/components/Atom/BaseNuxtLink/index.vue'
 import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 import TheBindFooter from '~/components/Organism/TheBindFooter/index.vue'
-import BaseNuxtLink from '@/components/Atom/BaseNuxtLink/index.vue'
 
 export default {
   name: 'LayoutsError',
