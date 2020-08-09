@@ -43,7 +43,7 @@
     "core-js": "3.6.5",
     "destyle.css": "1.0.13",
     "nuxt": "2.14.1",
-    "vue-feather-icons": "5.0.0",
+    "vue-feather-icons": "5.1.0",
     "vue-styled-components": "1.5.1"
   },
   "devDependencies": {
