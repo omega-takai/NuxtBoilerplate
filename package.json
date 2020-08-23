@@ -18,7 +18,8 @@
     "style-migration": "sass-migrator --load-path node_modules module --verbose --migrate-deps",
     "storybook": "start-storybook -c .storybook -p 6006",
     "storybook:debug": "yarn storybook --debug-webpack",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "test": "jest"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --fix",
@@ -57,7 +58,9 @@
     "@storybook/addons": "6.0.10",
     "@storybook/vue": "6.0.10",
     "@vue/compiler-sfc": "3.0.0-rc.5",
+    "@vue/test-utils": "^1.0.4",
     "babel-eslint": "10.1.0",
+    "babel-jest": "25.3",
     "babel-loader": "8.1.0",
     "babel-preset-vue": "2.0.2",
     "cross-env": "7.0.2",
@@ -67,6 +70,7 @@
     "eslint-plugin-prettier": "3.1.4",
     "fibers": "5.0.0",
     "husky": "4.2.5",
+    "jest": "25.3",
     "lint-staged": "10.2.11",
     "prettier": "2.0.5",
     "pug": "3.0.0",
@@ -81,6 +85,7 @@
     "stylelint-config-recommended-scss": "4.2.0",
     "stylelint-config-standard": "20.0.0",
     "stylelint-prettier": "1.1.2",
-    "stylelint-scss": "3.18.0"
+    "stylelint-scss": "3.18.0",
+    "vue-jest": "5.0.0-alpha.2"
   }
 }
