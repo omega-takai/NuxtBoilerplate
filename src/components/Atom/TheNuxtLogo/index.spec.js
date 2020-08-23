@@ -4,6 +4,6 @@ import TheNuxtLogo from './index.vue'
 describe('TheNuxtLogo', () => {
   test('is a Vue instance', () => {
     const wrapper = mount(TheNuxtLogo)
-    expect(wrapper.exists()).toBeTruthy()
+    expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })
