@@ -13,6 +13,18 @@ const routerBase = process.env.BASE_DIR
     }
   : {}
 
+const storybookOptions = {
+  storybook: {
+    port: 6006,
+    addons: [
+      // '@storybook/addon-notes',
+      '@storybook/addon-links',
+      '@storybook/addon-knobs',
+    ],
+    stories: ['../../src/components/**/*.story.@(ts|js)'],
+  },
+}
+
 export default {
   head: {
     title: process.env.npm_package_name || '',
@@ -93,4 +105,5 @@ export default {
     },
   },
   ...routerBase,
+  ...storybookOptions,
 }

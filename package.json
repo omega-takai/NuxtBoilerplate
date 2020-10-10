@@ -16,9 +16,9 @@
     "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
     "clean": "rimraf .nuxt dist .out public coverage",
     "style-migration": "sass-migrator --load-path node_modules module --verbose --migrate-deps",
-    "storybook": "start-storybook -c .storybook -p 6006",
+    "storybook": "nuxt storybook",
     "storybook:debug": "yarn storybook --debug-webpack",
-    "build-storybook": "build-storybook -c .storybook -o .out"
+    "build-storybook": "nuxt storybook build -o .out"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint --fix",
@@ -52,6 +52,8 @@
     "@nuxtjs/eslint-module": "2.0.0",
     "@nuxtjs/storybook": "^3.0.0",
     "@nuxtjs/stylelint-module": "4.0.0",
+    "@storybook/addon-knobs": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
     "@vue/compiler-sfc": "3.0.0",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
