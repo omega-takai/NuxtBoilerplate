@@ -12,6 +12,8 @@ coverage
 
 # Storybook generate
 .out
+.nuxt-storybook
+storybook-static
 
 ### Node template
 # Logs
