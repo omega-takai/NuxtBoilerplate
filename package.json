@@ -15,6 +15,7 @@
     "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
     "lint:script": "eslint --ext .js,.vue .",
     "lint:style": "stylelint **/*.css **/*.scss **/*.vue",
+    "sort": "sort-package-json",
     "start": "nuxt start",
     "storybook": "nuxt storybook",
     "storybook:debug": "yarn storybook --debug-webpack",
