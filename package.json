@@ -54,7 +54,7 @@
     "@nuxtjs/stylelint-module": "4.0.0",
     "@storybook/addon-knobs": "6.0.26",
     "@storybook/addon-links": "6.0.26",
-    "@vue/compiler-sfc": "3.0.0",
+    "@vue/compiler-sfc": "3.0.1",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.1.0",
     "babel-preset-vue": "2.0.2",
