@@ -6,7 +6,7 @@ export const state = () => ({
     },
     {
       name: 'References',
-      path: '/OtherPage',
+      path: '/References',
     },
   ],
   reference: [
