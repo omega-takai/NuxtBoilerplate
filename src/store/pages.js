@@ -19,11 +19,11 @@ export const state = () => ({
       path: 'https://jp.vuejs.org/',
     },
     {
-      name: 'スタイルガイド — Vue.js',
+      name: 'Vue.js スタイルガイド',
       path: 'https://jp.vuejs.org/v2/style-guide/index.html',
     },
     {
-      name: 'Vuex とは何か？ | Vuex',
+      name: 'Vuex',
       path: 'https://vuex.vuejs.org/ja/',
     },
     {
@@ -31,11 +31,11 @@ export const state = () => ({
       path: 'https://storybook.nuxtjs.org/',
     },
     {
-      name: 'Sass: Syntactically Awesome Style Sheets',
+      name: 'Sass',
       path: 'https://sass-lang.com/',
     },
     {
-      name: 'Pug - A high-performance template engine',
+      name: 'Pug',
       path: 'https://pugjs.org/',
     },
   ],
