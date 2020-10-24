@@ -20,8 +20,8 @@ export default {
   },
   computed: {
     className() {
-      const lowcase = this.colorType.toLowerCase()
-      return this.$style[lowcase]
+      const lowercase = this.colorType.toLowerCase()
+      return this.$style[lowercase]
     },
   },
 }
