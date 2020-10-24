@@ -3,12 +3,12 @@
 
   .listItem {
     position: relative;
+    font-size: base.type-scale('subtitle');
+    font-weight: base.type-weight('subtitle');
+    text-transform: uppercase;
     padding: {
       left: 1.2em;
     }
-
-    font-size: base.type-scale('subtitle');
-    font-weight: base.type-weight('subtitle');
 
     &.isActive {
       color: base.colors('accent');

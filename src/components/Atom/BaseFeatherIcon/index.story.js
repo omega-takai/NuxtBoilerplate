@@ -18,6 +18,7 @@ const icons = [
   'GithubIcon',
   'InstagramIcon',
   'TwitterIcon',
+  'FileTextIcon',
 ]
 
 storiesOf('Design System|Atom/BaseFeatherIcon', module)

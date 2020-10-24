@@ -1,12 +1,42 @@
 export const state = () => ({
   sitemap: [
     {
-      name: 'TOP',
+      name: 'Top',
       path: '/',
     },
     {
-      name: 'OTHER PAGE',
-      path: '/OtherPage',
+      name: 'References',
+      path: '/References',
+    },
+  ],
+  reference: [
+    {
+      name: 'NuxtJS',
+      path: 'https://ja.nuxtjs.org/',
+    },
+    {
+      name: 'Vue.js',
+      path: 'https://jp.vuejs.org/',
+    },
+    {
+      name: 'Vue.js スタイルガイド',
+      path: 'https://jp.vuejs.org/v2/style-guide/index.html',
+    },
+    {
+      name: 'Vuex',
+      path: 'https://vuex.vuejs.org/ja/',
+    },
+    {
+      name: 'Nuxt Storybook',
+      path: 'https://storybook.nuxtjs.org/',
+    },
+    {
+      name: 'Sass',
+      path: 'https://sass-lang.com/',
+    },
+    {
+      name: 'Pug',
+      path: 'https://pugjs.org/',
     },
   ],
 })
