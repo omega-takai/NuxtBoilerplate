@@ -8,7 +8,7 @@
         tag="div"
         class="container"
       )
-        BaseTypography(:level="1" text="OtherPage" key="title")
+        BaseTypography(:level="1" text="References" key="title")
         ul(
           key="links"
           class="wrapper"

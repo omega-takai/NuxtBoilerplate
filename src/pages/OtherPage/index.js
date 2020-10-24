@@ -6,7 +6,7 @@ import BaseTypography from '~/components/Atom/BaseTypography/index.vue'
 import BaseLinkText from '~/components/Atom/BaseLinkText/index.vue'
 
 export default {
-  name: 'OtherPage',
+  name: 'References',
   components: {
     BaseLayout,
     BaseTypography,

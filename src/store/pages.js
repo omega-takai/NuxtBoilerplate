@@ -1,11 +1,11 @@
 export const state = () => ({
   sitemap: [
     {
-      name: 'TOP',
+      name: 'Top',
       path: '/',
     },
     {
-      name: 'OTHER PAGE',
+      name: 'References',
       path: '/OtherPage',
     },
   ],
