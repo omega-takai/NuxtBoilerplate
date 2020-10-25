@@ -9,7 +9,13 @@ export default {
     }
   },
   computed: {
-    ...mapState('device-type', ['isMobile', 'isTablet', 'isDesktop']),
+    ...mapState('device-type', [
+      'isMobile',
+      'isTablet',
+      'isDesktop',
+      'isLandscape',
+      'isPortrait',
+    ]),
     classNameObject() {
       return {
         [this.$style.root]: true,
@@ -24,12 +30,15 @@ export default {
       // SEE: https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList/addListener
       const mqlMobile = window.matchMedia('(max-width: 560px)')
       const mqlDesktop = window.matchMedia('(min-width: 961px)')
+      const mqlLandscape = window.matchMedia('(orientation: landscape)')
       // initial screen test
       this.matchMobile(mqlMobile)
       this.matchDesktop(mqlDesktop)
+      this.matchLandscape(mqlLandscape)
       // Start observing the screen size
       mqlMobile.addListener(this.matchMobile)
       mqlDesktop.addListener(this.matchDesktop)
+      mqlLandscape.addListener(this.matchLandscape)
     })
   },
   methods: {
@@ -37,7 +46,11 @@ export default {
       'setFlagMobile',
       'setFlagTablet',
       'setFlagDesktop',
+      'setFlagLandscape',
     ]),
+    matchLandscape(mql) {
+      this.setFlagLandscape(mql.matches)
+    },
     matchMobile(mql) {
       if (mql.matches) {
         this.setFlagMobile()
