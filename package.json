@@ -74,7 +74,7 @@
     "sass": "1.27.0",
     "sass-loader": "10.0.4",
     "sass-migrator": "1.2.5",
-    "sort-package-json": "1.46.0",
+    "sort-package-json": "1.46.1",
     "stylelint": "13.7.2",
     "stylelint-config-prettier": "8.0.2",
     "stylelint-config-recess-order": "2.1.0",
