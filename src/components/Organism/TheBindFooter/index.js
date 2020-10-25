@@ -11,15 +11,24 @@ export default {
   },
   computed: {
     ...mapState(['author', 'repositoryUrl']),
-    ...mapState('device-type', ['isMobile', 'isTablet', 'isDesktop']),
+    ...mapState('device-type', [
+      'isMobile',
+      'isTablet',
+      'isDesktop',
+      'isLandscape',
+    ]),
     statusText() {
+      let orientation = 'isPortrait'
       let text = 'isMobile'
       if (this.isTablet) {
         text = 'isTablet'
       } else if (this.isDesktop) {
         text = 'isDesktop'
       }
-      return text
+      if (this.isLandscape) {
+        orientation = 'isLandscape'
+      }
+      return `${text} + ${orientation}`
     },
   },
 }
