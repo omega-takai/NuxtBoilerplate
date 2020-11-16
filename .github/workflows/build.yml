@@ -30,7 +30,7 @@ jobs:
 
       - run: yarn install
       - run: yarn build-storybook
-      - uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v2
         with:
           name: Storybook
           path: .out
