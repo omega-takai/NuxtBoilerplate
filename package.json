@@ -45,7 +45,7 @@
     "destyle.css": "1.0.15",
     "nuxt": "2.14.7",
     "vue-feather-icons": "5.1.0",
-    "vue-styled-components": "1.5.1"
+    "vue-styled-components": "1.6.0"
   },
   "devDependencies": {
     "@babel/runtime-corejs3": "7.12.5",
