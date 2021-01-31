@@ -41,7 +41,7 @@
   ],
   "dependencies": {
     "@nuxtjs/axios": "5.12.5",
-    "core-js": "3.8.1",
+    "core-js": "3.8.3",
     "destyle.css": "2.0.2",
     "nuxt": "2.14.7",
     "vue-feather-icons": "5.1.0",
