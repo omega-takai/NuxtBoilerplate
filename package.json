@@ -40,7 +40,7 @@
     "IE 11"
   ],
   "dependencies": {
-    "@nuxtjs/axios": "5.12.4",
+    "@nuxtjs/axios": "5.12.5",
     "core-js": "3.8.1",
     "destyle.css": "2.0.2",
     "nuxt": "2.14.7",
