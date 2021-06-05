@@ -46,8 +46,7 @@ export default {
       },
       {
         rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese',
+        href: 'https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700,900&display=swap&subset=japanese',
       },
     ],
   },
