@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   NuxtLink(
     :to="url"
@@ -9,3 +8,4 @@
     slot
     span(v-text="text")
 </template>
+<style lang="scss" src="./index.scss" module></style>
