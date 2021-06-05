@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" scoped></style>
 <template lang="pug">
   a(
     target="_blank"
@@ -10,3 +9,4 @@
     slot
     span(v-text="text")
 </template>
+<style lang="scss" src="./index.scss" scoped></style>

@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   ul(:class="$style.wrapper")
     li(
@@ -19,3 +18,4 @@
             :class="$style.icon"
           )
 </template>
+<style lang="scss" src="./index.scss" module></style>

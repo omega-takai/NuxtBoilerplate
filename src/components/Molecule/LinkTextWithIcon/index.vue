@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" scoped></style>
 <template lang="pug">
   BaseLinkText(
     :url="url"
@@ -12,3 +11,4 @@
       class="icon"
     )
 </template>
+<style lang="scss" src="./index.scss" scoped></style>

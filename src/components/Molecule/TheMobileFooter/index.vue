@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   footer(:class="$style.footer")
     dl
@@ -29,3 +28,4 @@
 
     div(:class="$style.copy") © 2020 {{ authorName }}.
 </template>
+<style lang="scss" src="./index.scss" module></style>

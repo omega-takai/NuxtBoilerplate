@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" module src="./index.scss"></style>
 <template lang="pug">
   BaseLayout
     template(#default)
@@ -17,3 +16,4 @@
           key="title"
         )
 </template>
+<style lang="scss" module src="./index.scss"></style>

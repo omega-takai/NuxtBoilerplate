@@ -1,5 +1,4 @@
 <script src="./index.js"></script>
-<style lang="scss" src="./index.scss" module></style>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -9,3 +8,4 @@
 
     TheBindFooter(:class="$style.footer")
 </template>
+<style lang="scss" src="./index.scss" module></style>

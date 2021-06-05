@@ -1,4 +1,3 @@
-<style lang="scss" module src="@/assets/style/layouts/error.scss"></style>
 <template lang="pug">
   div(:class="$style.layout")
 
@@ -35,6 +34,11 @@ export default {
       default: null,
     },
   },
+  head() {
+    return {
+      title: this.message,
+    }
+  },
   computed: {
     statusCode() {
       return (this.error && this.error.statusCode) || 500
@@ -43,10 +47,6 @@ export default {
       return this.error.message || '<%= messages.client_error %>'
     },
   },
-  head() {
-    return {
-      title: this.message,
-    }
-  },
 }
 </script>
+<style lang="scss" module src="@/assets/style/layouts/error.scss"></style>
