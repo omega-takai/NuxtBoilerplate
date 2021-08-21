@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build",
+    "prestart": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --max-warnings 0 --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "prepare": "husky install",
-    "lint": "yarn lint:js && yarn lint:style",
-    "lint:fix": "yarn lint:js --fix && yarn lint:style --fix",
+    "clean": "rimraf .nuxt dist .out public coverage",
+    "sort": "sort-package-json",
+    "lint": "yarn lint:js --fix && yarn lint:style --fix",
     "test": "jest"
   },
   "lint-staged": {
@@ -42,6 +43,8 @@
     "jest": "^27.0.5",
     "lint-staged": "^10.5.4",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^1.50.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
