@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, radios } from '@storybook/addon-knobs'
 import { action } from '@storybook/addon-actions'
-import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
 import BaseFeatherIcon from './index.vue'
+import { FlexLayout, FlexItem } from '@/assets/styledComponent/component'
 
 const iconSize = ['24', '1x', '1.5x', '2x', '3x', '4x']
 const icons = [

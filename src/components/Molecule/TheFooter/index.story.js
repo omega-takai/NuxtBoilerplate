@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/vue'
 import { withKnobs, text } from '@storybook/addon-knobs'
-import { Wrapper } from '@/assets/styledComponent/component'
 import TheFooter from './index.vue'
+import { Wrapper } from '@/assets/styledComponent/component'
 
 const stories = storiesOf('Design System|Molecule/TheFooter', module)
 
