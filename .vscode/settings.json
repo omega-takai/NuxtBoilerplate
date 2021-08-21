@@ -6,7 +6,8 @@
     "mixins",
     "nuxt",
     "nuxtjs",
-    "styl"
+    "styl",
+    "uncompiled"
   ],
   "cSpell.ignorePaths": [
     "node_modules",
