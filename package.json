@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "prestart": "nuxt build",
     "start": "nuxt start",
+    "pregenerate": "yarn clean",
     "generate": "nuxt generate",
     "lint:script": "eslint --max-warnings 0 --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
