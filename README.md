@@ -87,6 +87,7 @@ More information about the usage of this directory in [the documentation](https:
 
 - [Nuxt.js docs](https://ja.nuxtjs.org/)
 - [Vue.js life cycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
+- [Storybook](https://storybook.js.org/docs/vue/get-started/introduction)
 - [Sass: sass:math](https://sass-lang.com/documentation/modules/math)
 - [Pug](https://pugjs.org/api/getting-started.html)
 - [Nuxt TypeScript docs](https://typescript.nuxtjs.org/ja/).
