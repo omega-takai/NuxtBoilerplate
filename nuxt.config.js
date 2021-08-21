@@ -9,29 +9,19 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
-  css: [
-  ],
-  plugins: [
-  ],
+  css: [],
+  plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-    '@nuxt/typescript-build',
-    '@nuxtjs/stylelint-module',
-  ],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/stylelint-module'],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-  ],
+  modules: ['@nuxtjs/axios', '@nuxtjs/pwa'],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
@@ -44,6 +34,5 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-  }
+  build: {}
 }

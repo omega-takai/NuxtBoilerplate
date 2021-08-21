@@ -1,5 +1,3 @@
 {
-  "extends": [
-    "@t--takai"
-  ]
+  "extends": ["@t--takai"]
 }

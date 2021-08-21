@@ -7,16 +7,17 @@
     "start": "nuxt start",
     "pregenerate": "yarn clean",
     "generate": "nuxt generate",
+    "lint:format": "prettier -c . --write",
     "lint:script": "eslint --max-warnings 0 --ext \".js,.ts,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
     "prepare": "husky install",
-    "clean": "rimraf .nuxt dist .out public coverage",
+    "clean": "rimraf .nuxt dist .out public coverage test/coverage",
     "sort": "sort-package-json",
-    "lint": "yarn lint:script --fix && yarn lint:style --fix",
-    "test": "jest"
+    "lint": "yarn lint:format && yarn lint:script --fix && yarn lint:style --fix",
+    "test": "jest --config test/jest.config.js"
   },
   "lint-staged": {
-    "*.{js,ts,vue,json}": "prettier -c",
+    "*.{js,ts,vue,json}": "prettier -c --write",
     "*.{js,.ts,vue}": "eslint --fix --max-warnings 0",
     "*.{css,.scss,vue}": "stylelint --fix"
   },
