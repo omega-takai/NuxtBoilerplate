@@ -1,13 +1,31 @@
 {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "vetur.format.enable": false,
+  "html.format.enable": false,
+  "vetur.validation.template": false,
+  "javascript.format.enable": false,
+  "json.format.enable": false,
+  "vetur.validation.script": false,
+  "css.validate": false,
+  "scss.validate": false,
+  "vetur.validation.style": false,
   "cSpell.words": [
     "Hiragino",
     "Meiryo",
     "Yaku",
+    "dbaeumer",
+    "esbenp",
     "mixins",
     "nuxt",
     "nuxtjs",
     "styl",
-    "uncompiled"
+    "uncompiled",
+    "vetur"
   ],
   "cSpell.ignorePaths": [
     "node_modules",
