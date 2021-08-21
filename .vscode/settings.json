@@ -14,5 +14,6 @@
     "vscode-extension",
     "yarn.lock",
     ".git"
-  ]
+  ],
+  "npm.packageManager": "auto"
 }

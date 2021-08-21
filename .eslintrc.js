@@ -16,9 +16,9 @@ module.exports = {
     semi: [2, 'never'],
     'no-console': 'off',
     'vue/max-attributes-per-line': 'off',
-    'prettier/prettier': [
-      'error',
-      { trailingComma: 'es5', singleQuote: true, semi: false },
-    ],
+    // 'prettier/prettier': [
+    //   'error',
+    //   { trailingComma: 'es5', singleQuote: true, semi: false },
+    // ],
   },
 }
