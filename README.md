@@ -92,3 +92,4 @@ More information about the usage of this directory in [the documentation](https:
 - [Pug](https://pugjs.org/api/getting-started.html)
 - [Nuxt TypeScript docs](https://typescript.nuxtjs.org/ja/).
 - [Nuxt Community TypeScript Template](https://github.com/nuxt-community/typescript-template).
+- [stylelint](https://stylelint.io/)
