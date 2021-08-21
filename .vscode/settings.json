@@ -23,6 +23,8 @@
     "mixins",
     "nuxt",
     "nuxtjs",
+    "precache",
+    "precaching",
     "styl",
     "uncompiled",
     "vetur"
