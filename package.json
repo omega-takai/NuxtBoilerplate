@@ -8,7 +8,7 @@
     "pregenerate": "yarn clean",
     "generate": "nuxt generate",
     "lint:format": "prettier -c . --ignore-path .gitignore",
-    "lint:script": "eslint --debug --max-warnings 0 --ignore-path .gitignore -c .eslintrc.js",
+    "lint:script": "eslint --ext \".js,.ts,.vue\" --max-warnings 0 --ignore-path .gitignore",
     "lint:style": "stylelint \"**/*.{vue,css,scss}\" --ignore-path .gitignore",
     "prepare": "husky install",
     "clean": "rimraf .nuxt dist .out public coverage test/coverage",
@@ -20,7 +20,7 @@
   },
   "lint-staged": {
     "*.{js,ts,vue,json}": "prettier -c --write",
-    "*.{js,.ts,vue}": "eslint --fix --max-warnings 0",
+    "*.{js,.ts,vue}": "eslint --fix --max-warnings 0 --no-ignore",
     "*.{css,.scss,vue}": "stylelint --fix"
   },
   "dependencies": {
