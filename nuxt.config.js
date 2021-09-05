@@ -49,6 +49,10 @@ export default {
     },
   },
 
+  generate: {
+    fallback: true, // 404.html
+    dir: 'public',
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 }
