@@ -7,13 +7,15 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "lint:format": "prettier -c .",
     "lint:script": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint:fix": "yarn lint:script --fix && yarn lint:style --fix",
+    "lint:fix": "yarn lint:format --write && yarn lint:script --fix && yarn lint:style --fix",
     "prepare": "husky install",
     "test": "jest"
   },
   "lint-staged": {
+    "*.{js,ts,vue,json}": "prettier -c --write",
     "*.{js,vue}": "eslint --fix",
     "*.{css,vue}": "stylelint --fix"
   },
