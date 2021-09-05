@@ -11,6 +11,7 @@
     "lint:script": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint:fix": "yarn lint:format --write && yarn lint:script --fix && yarn lint:style --fix",
+    "clean": "rimraf .nuxt dist .out public coverage test/coverage && sort-package-json",
     "prepare": "husky install",
     "test": "jest"
   },
@@ -41,6 +42,8 @@
     "jest": "^27.0.5",
     "lint-staged": "^10.5.4",
     "prettier": "^2.3.2",
+    "rimraf": "^3.0.2",
+    "sort-package-json": "^1.50.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
