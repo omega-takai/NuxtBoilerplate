@@ -1,4 +1,20 @@
-# newone
+# NuxtBoilerplate
+
+![GitHub Pages Deployment - Nuxt.js](https://github.com/t--takai/NuxtBoilerplate/workflows/GitHub%20Pages%20Deployment%20-%20Nuxt.js/badge.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://github.com/t--takai/NuxtBoilerplate/blob/master/LICENSE)
+
+## Status on develop-branch
+
+![CHECK BUILD](https://github.com/t--takai/NuxtBoilerplate/workflows/CHECK%20BUILD/badge.svg?branch=develop)
+![CI TEST](https://github.com/t--takai/NuxtBoilerplate/workflows/CI%20TEST/badge.svg?branch=develop)
+
+## DEMO
+
+<https://t--takai.github.io/NuxtBoilerplate/>
+
+<https://takai-nuxt-boilerplate.netlify.app/>
+
+## Features
 
 ## Build Setup
 
@@ -66,3 +82,14 @@ More information about the usage of this directory in [the documentation](https:
 This directory contains your Vuex store files. Creating a file in this directory automatically activates Vuex.
 
 More information about the usage of this directory in [the documentation](https://nuxtjs.org/docs/2.x/directory-structure/store).
+
+## References
+
+- [Nuxt.js docs](https://ja.nuxtjs.org/)
+- [Vue.js life cycle Diagram](https://jp.vuejs.org/v2/guide/instance.html#ライフサイクルダイアグラム)
+- [Storybook](https://storybook.js.org/docs/vue/get-started/introduction)
+- [Sass: sass:math](https://sass-lang.com/documentation/modules/math)
+- [Pug](https://pugjs.org/api/getting-started.html)
+- [Nuxt TypeScript docs](https://typescript.nuxtjs.org/ja/).
+- [Nuxt Community TypeScript Template](https://github.com/nuxt-community/typescript-template).
+- [stylelint](https://stylelint.io/)
