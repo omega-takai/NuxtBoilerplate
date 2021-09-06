@@ -1,12 +1,3 @@
-/* eslint-disable no-console */
-const routerBase = process.env.NUXT_ENV_BASE_URL
-  ? {
-      router: {
-        base: process.env.NUXT_ENV_BASE_URL,
-      },
-    }
-  : {}
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -68,5 +59,7 @@ export default {
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
-  ...routerBase,
+  router: {
+    base: process.env.NUXT_ENV_BASE_URL || '/',
+  },
 }
