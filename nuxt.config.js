@@ -1,10 +1,19 @@
+/* eslint-disable no-console */
+const routerBase = process.env.NUXT_ENV_BASE_URL
+  ? {
+      router: {
+        base: process.env.NUXT_ENV_BASE_URL,
+      },
+    }
+  : {}
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'newone',
+    title: process.env.npm_package_name || '',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -52,7 +61,12 @@ export default {
   generate: {
     fallback: true, // 404.html
     dir: 'public',
+    devtools: true,
+    cache: {
+      ignore: ['renovate.json'], // このファイルに適用された変更を無視する
+    },
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+  ...routerBase,
 }
