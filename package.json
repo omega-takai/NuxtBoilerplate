@@ -28,6 +28,9 @@
     "core-js": "3.17.2",
     "nuxt": "2.15.8"
   },
+  "engines": {
+    "node": "14"
+  },
   "devDependencies": {
     "@babel/eslint-parser": "7.15.4",
     "@nuxtjs/eslint-config": "6.0.1",
