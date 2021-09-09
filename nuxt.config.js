@@ -62,4 +62,7 @@ export default {
   router: {
     base: process.env.NUXT_ENV_BASE_URL || '/',
   },
+  storybook: {
+    // Options
+  },
 }
