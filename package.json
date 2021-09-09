@@ -13,7 +13,7 @@
     "lint:script": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint:fix": "yarn lint:format --write && yarn lint:script --fix && yarn lint:style --fix",
-    "clean": "rimraf .nuxt dist .out public coverage test/coverage && sort-package-json",
+    "clean": "rimraf .nuxt dist storybook-static .nuxt-storybook public coverage test/coverage && sort-package-json",
     "prepare": "husky install",
     "test": "jest"
   },
