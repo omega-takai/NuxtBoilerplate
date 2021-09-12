@@ -2,6 +2,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
+  // https://ja.nuxtjs.org/docs/2.x/configuration-glossary/configuration-srcdir
+  srcDir: 'src/',
+
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: process.env.npm_package_name || '',
