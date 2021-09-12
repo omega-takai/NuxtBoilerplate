@@ -19,8 +19,8 @@
   },
   "lint-staged": {
     "*.{js,ts,vue,json}": "prettier -c --write",
-    "*.{js,vue}": "eslint --fix",
-    "*.{css,vue}": "stylelint --fix"
+    "*.{js,ts,vue}": "eslint --fix --max-warnings 0 --no-ignore",
+    "*.{css,scss,sass,vue}": "stylelint --fix"
   },
   "dependencies": {
     "@nuxtjs/axios": "5.13.6",
