@@ -46,6 +46,8 @@
     "lint-staged": "11.1.2",
     "postcss": "^8.3.6",
     "prettier": "2.3.2",
+    "pug": "^3.0.2",
+    "pug-plain-loader": "^1.1.0",
     "rimraf": "3.0.2",
     "sort-package-json": "1.50.0",
     "stylelint": "13.13.1",
