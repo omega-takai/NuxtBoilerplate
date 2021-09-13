@@ -34,6 +34,12 @@
     "package.json",
     "vscode-extension",
     "yarn.lock",
+    ".nuxt",
+    "dist",
+    "storybook-static",
+    ".nuxt-storybook",
+    "public",
+    "coverage",
     ".git"
   ],
   "npm.packageManager": "auto"
