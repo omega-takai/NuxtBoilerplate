@@ -2007,13 +2007,13 @@
     upath "^2.0.1"
     vue-loader "^15.9.7"
 
-"@nuxtjs/stylelint-module@4.0.0":
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/@nuxtjs/stylelint-module/-/stylelint-module-4.0.0.tgz#926465bacc3317197906871349c216361f18b4fa"
-  integrity sha512-yNVCpbZQH07wr7nOoTdb7dNHSA2PUw/Y9Pw2rOQ3Dp2FSDh6/+o56Pojwnxf/xBON9EUBiCrglTMMO3mWd7YQA==
+"@nuxtjs/stylelint-module@4.1.0":
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/stylelint-module/-/stylelint-module-4.1.0.tgz#2d69dc882a0b2b4391311c405b07d4b39a975ff5"
+  integrity sha512-XeUZobXlSVW5VDbZBDktB3oFkBm+4JhYlyvZqu4tD7F3Qf4IU5aFwlELbK+VLVewbGgKSEg4QaT5nZdWpgXQBw==
   dependencies:
-    consola "^2.12.1"
-    stylelint-webpack-plugin "^2.0.0"
+    consola "^2.15.3"
+    stylelint-webpack-plugin "^2.3.1"
 
 "@nuxtjs/youch@^4.2.3":
   version "4.2.3"
@@ -3099,14 +3099,6 @@
   version "0.0.30"
   resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
   integrity sha512-7NQmHra/JILCd1QqpSzl8+mJRc8ZHz3uDm8YV1Ks9IhK0epEiTw8aIErbvH9PI+6XbqhyIQy3462nEsn7UVzjQ==
-
-"@types/stylelint@^13.13.0":
-  version "13.13.2"
-  resolved "https://registry.yarnpkg.com/@types/stylelint/-/stylelint-13.13.2.tgz#7a8a99bdbe19187b973a290dd3f821cfe5caff6e"
-  integrity sha512-5Yt1LQenR7uk+efCydQmN7ubOtO2qJ8Z9K/qqnlW87X1zkIQ8RkMCZbaOgZj/aBrR/h5Q738mJU6CYhXOj9sEg==
-  dependencies:
-    globby "11.x.x"
-    postcss "7.x.x"
 
 "@types/tapable@^1", "@types/tapable@^1.0.5":
   version "1.0.8"
@@ -5288,7 +5280,7 @@ connect@^3.7.0:
     parseurl "~1.3.3"
     utils-merge "1.0.1"
 
-consola@^2.10.0, consola@^2.12.1, consola@^2.15.0, consola@^2.15.3, consola@^2.6.0, consola@^2.9.0:
+consola@^2.10.0, consola@^2.15.0, consola@^2.15.3, consola@^2.6.0, consola@^2.9.0:
   version "2.15.3"
   resolved "https://registry.yarnpkg.com/consola/-/consola-2.15.3.tgz#2e11f98d6a4be71ff72e0bdf07bd23e12cb61550"
   integrity sha512-9vAdYbHj6x2fLKC4+oPH0kFzY/orMZyG2Aj+kNylHxKGJ/Ed4dpNyAQYwJOdqO4zdM7XpVHmyejQDcQHrnuXbw==
@@ -7775,7 +7767,7 @@ globby@11.0.1:
     merge2 "^1.3.0"
     slash "^3.0.0"
 
-globby@11.x.x, globby@^11.0.2, globby@^11.0.3, globby@^11.0.4:
+globby@^11.0.2, globby@^11.0.3, globby@^11.0.4:
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/globby/-/globby-11.0.4.tgz#2cbaff77c2f2a62e71e9b2813a67b97a3a3001a5"
   integrity sha512-9O4MVG9ioZJ08ffbcyVYyLOJLk5JQ688pJ4eMGLpdWLHq/Wr1D9BlriLQyL0E+jbkuePVZXYFj47QM/v093wHg==
@@ -9514,10 +9506,10 @@ jest-worker@^26.5.0, jest-worker@^26.6.2:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jest-worker@^27.0.2:
-  version "27.1.0"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-27.1.0.tgz#65f4a88e37148ed984ba8ca8492d6b376938c0aa"
-  integrity sha512-mO4PHb2QWLn9yRXGp7rkvXLAYuxwhq1ZYUo0LoDhg8wqvv4QizP1ZWEJOeolgbEgAWZLIEU0wsku8J+lGWfBhg==
+jest-worker@^27.3.1:
+  version "27.4.6"
+  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-27.4.6.tgz#5d2d93db419566cb680752ca0792780e71b3273e"
+  integrity sha512-gHWJF/6Xi5CTG5QCvROr6GcmpIqNYpDJyc8A1h/DyXqH1tD6SnRCM0d3U5msV31D2LB/U+E0M+W4oyvKV44oNw==
   dependencies:
     "@types/node" "*"
     merge-stream "^2.0.0"
@@ -12352,15 +12344,6 @@ postcss-values-parser@^2.0.0, postcss-values-parser@^2.0.1:
     indexes-of "^1.0.1"
     uniq "^1.0.1"
 
-postcss@7.x.x, postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.31, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6:
-  version "7.0.36"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
-  integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
-  dependencies:
-    chalk "^2.4.2"
-    source-map "^0.6.1"
-    supports-color "^6.1.0"
-
 postcss@8.3.11:
   version "8.3.11"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.3.11.tgz#c3beca7ea811cd5e1c4a3ec6d2e7599ef1f8f858"
@@ -12369,6 +12352,15 @@ postcss@8.3.11:
     nanoid "^3.1.30"
     picocolors "^1.0.0"
     source-map-js "^0.6.2"
+
+postcss@^7.0.0, postcss@^7.0.1, postcss@^7.0.14, postcss@^7.0.17, postcss@^7.0.2, postcss@^7.0.21, postcss@^7.0.26, postcss@^7.0.27, postcss@^7.0.31, postcss@^7.0.32, postcss@^7.0.35, postcss@^7.0.36, postcss@^7.0.5, postcss@^7.0.6:
+  version "7.0.36"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.36.tgz#056f8cffa939662a8f5905950c07d5285644dfcb"
+  integrity sha512-BebJSIUMwJHRH0HAQoxN4u1CN86glsrwsW0q7T+/m44eXOUAxSNdHRkNZPYz5vVUbg17hFgOQDE7fZk7li3pZw==
+  dependencies:
+    chalk "^2.4.2"
+    source-map "^0.6.1"
+    supports-color "^6.1.0"
 
 postcss@^8.1.10, postcss@^8.2.15, postcss@^8.3.5:
   version "8.3.6"
@@ -13663,7 +13655,7 @@ schema-utils@^2.0.0, schema-utils@^2.6.5, schema-utils@^2.7.0, schema-utils@^2.7
     ajv "^6.12.4"
     ajv-keywords "^3.5.2"
 
-schema-utils@^3.0.0:
+schema-utils@^3.0.0, schema-utils@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.1.1.tgz#bc74c4b6b6995c1d88f76a8b77bea7219e0c8281"
   integrity sha512-Y5PQxS4ITlC+EahLuXaY86TXfR7Dc5lw294alXOq86JAHCihAIZfqv8nNCWvaEJvaC51uN9hbLGeV0cFBdH+Fw==
@@ -14534,18 +14526,17 @@ stylelint-scss@3.20.1:
     postcss-selector-parser "^6.0.2"
     postcss-value-parser "^4.1.0"
 
-stylelint-webpack-plugin@^2.0.0:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-2.2.2.tgz#ecd241fb689346ee471c125fb0ef149488bd1980"
-  integrity sha512-zfIsAF13xe6xuhwxZDFWQEmuVcxnRk9JFovyRL/23CWjPK1HLRw4QZdvo0Bz1bQZaDQA+6ha7cU0NO+LXaw4Mw==
+stylelint-webpack-plugin@^2.3.1:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/stylelint-webpack-plugin/-/stylelint-webpack-plugin-2.3.2.tgz#edb849250fb829349ddb41bc07d343c39d3391ce"
+  integrity sha512-gjerWQ7nY+4JdebL3LTDPp80DV10O1OOWtM+v+W29+ThzLsKGz3UptEVd0jVdFpWEohEXVilbnan2b/YXxakqA==
   dependencies:
-    "@types/stylelint" "^13.13.0"
     arrify "^2.0.1"
     globby "^11.0.4"
-    jest-worker "^27.0.2"
+    jest-worker "^27.3.1"
     micromatch "^4.0.4"
     normalize-path "^3.0.0"
-    schema-utils "^3.0.0"
+    schema-utils "^3.1.1"
 
 stylelint@13.13.1:
   version "13.13.1"
